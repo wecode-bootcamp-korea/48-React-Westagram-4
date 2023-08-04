@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#content_wrap {
+  /* background-color: gainsboro; */
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 12px;
+  max-width: 350px;
+  height: 400px;
+}
+
+.logo_name {
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.input_wrap {
+  display: flex;
+  /* background-color: burlywood; */
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.put {
+  font-size: 10px;
+  padding: 8px 9px;
+  width: 260px;
+  height: 36px;
+  margin-bottom: 5px;
+  background-color: #fafafa;
+  border: 1px solid #ced0d4;
+  outline: none;
+  border-radius: 3px;
+
+  &:focus {
+    border: 1px solid #65676b;
+  }
+}
+
+.login_button {
+  color: white;
+  font-weight: bold;
+  /* padding: 8px 9px; */
+  width: 260px;
+  height: 32px;
+  background-color: #b5cde2;
+  border-radius: 10px;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #67b5fa;
+  }
+}
+
+.find_password {
+  color: #00376b;
+  font-size: 12px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+a,
+.login_button {
+  cursor: pointer;
+}
