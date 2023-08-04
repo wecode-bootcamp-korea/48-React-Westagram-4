@@ -1,20 +1,31 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// codePark 의 컴포넌트
-import MainCodePark from "./pages/codePark/Main/Main";
-import LoginCodePark from "./pages/codePark/Login/Login";
+// Mihye 의 컴포넌트
+import MainMihye from "./pages/mihye/Main/main";
+import LoginMihye from "./pages/mihye/Login/login";
 
-// gaebalKim 의 컴포넌트
-import MainGaebalKim from "./pages/gaebalKim/Main/Main";
-import LoginGaebalKim from "./pages/gaebalKim/Login/Login";
+// Heejin 의 컴포넌트
+import MainHeejin from "./pages/heejin/Main/main";
+import LoginHeejin from "./pages/heejin/Login/login";
+// Dongcheol 의 컴포넌트
+import MainDongcheol from "./pages/dongcheol/Main/main";
+import LoginDongcheol from "./pages/dongcheol/Login/login";
+
+// jeongwan 의 컴포넌트
+import MainJeongwan from "./pages/jeongwan/Main/main";
+import LoginJeongwan from "./pages/jeongwan/Login/login";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/codepark-main" element={<MainCodePark />} />
-        <Route path="/codepark-login" element={<LoginCodePark />} />
-        <Route path="/gaebalkim-main" element={<MainGaebalKim />} />
-        <Route path="/gaebalkim-login" element={<LoginGaebalKim />} />
+        <Route path="/mihye-main" element={<MainMihye />} />
+        <Route path="/mihye-login" element={<LoginMihye />} />
+        <Route path="/heejin-main" element={<MainHeejin />} />
+        <Route path="/heejin-login" element={<LoginHeejin />} />
+        <Route path="/dongcheol-main" element={<MainDongcheol />} />
+        <Route path="/dongcheol-login" element={<LoginDongcheol />} />
+        <Route path="/jeongwan-main" element={<MainJeongwan />} />
+        <Route path="/jeongwan-login" element={<LoginJeongwan />} />
       </Routes>
     </BrowserRouter>
   );
