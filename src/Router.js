@@ -1,18 +1,18 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Mihye 의 컴포넌트
-import MainMihye from "./pages/mihye/Main/main";
-import LoginMihye from "./pages/mihye/Login/login";
+import MainMihye from "./pages/mihye/Main/Main";
+import LoginMihye from "./pages/mihye/Login/Login";
 
 // Heejin 의 컴포넌트
-import MainHeejin from "./pages/heejin/Main/main";
-import LoginHeejin from "./pages/heejin/Login/login";
+import MainHeejin from "./pages/heejin/Main/Main";
+import LoginHeejin from "./pages/heejin/Login/Login";
 // Dongcheol 의 컴포넌트
-import MainDongcheol from "./pages/dongcheol/Main/main";
-import LoginDongcheol from "./pages/dongcheol/Login/login";
+import MainDongcheol from "./pages/dongcheol/Main/Main";
+import LoginDongcheol from "./pages/dongcheol/Login/Login";
 
 // jeongwan 의 컴포넌트
-import MainJeongwan from "./pages/jeongwan/Main/main";
-import LoginJeongwan from "./pages/jeongwan/Login/login";
+import MainJeongwan from "./pages/jeongwan/Main/Main";
+import LoginJeongwan from "./pages/jeongwan/Login/Login";
 
 const Router = () => {
   return (
