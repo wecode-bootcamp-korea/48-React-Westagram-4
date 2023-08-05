@@ -7,9 +7,7 @@ export default function Feeds() {
       <Article
         userId={"_waltzfordebby"}
         userName={"박동철"}
-        userImg={
-          "https://file.notion.so/f/s/d5ab9838-845a-405e-840d-516c37f27183/kp.jpg?id=19092177-f7de-4949-b44b-482b580e3a51&table=block&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&expirationTimestamp=1691136000000&signature=ZPrvjqM2g1Y6ImWejMwHw_ac2g-x5tZjcqScAgTEI9k&downloadName=kp.jpg"
-        }
+        userImg={"https://img.freepik.com/free-icon/user_318-644324.jpg?w=2000"}
         img={
           "https://www.tu.ac.kr/app/board/attach/image/26576_1666146993000.do"
         }
