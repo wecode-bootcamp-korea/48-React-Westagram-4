@@ -14,17 +14,17 @@ export default function Nav() {
       <div className="nav-left">
         <img
           onClick={() => {
-            goTo("/");
+            goTo("/dongcheol-login");
           }}
-          src="/images/insta_mini_logo.png"
+          src="/images/dongcheol/insta_mini_logo.png"
           alt="instagram"
         />
         <div className="logo-line"></div>
         <img
           onClick={() => {
-            goTo("/main");
+            goTo("/dongcheol-main");
           }}
-          src="/images/instagram_logo.png"
+          src="/images/dongcheol/instagram_logo.png"
           alt="instagram"
         />
       </div>

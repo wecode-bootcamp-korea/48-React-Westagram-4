@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  PiChatCircleLight,
+  PiHeartLight,
+  PiBookmarkSimpleLight,
+  PiPaperPlaneTiltLight,
+} from "react-icons/pi";
 
 export default function Article({
   likes,
@@ -26,6 +32,16 @@ export default function Article({
         <div className="fb-info">
           <div className="fbi-left"></div>
           <div className="fbi-right"></div>
+        </div>
+        <div className="fb-btns">
+          <div className="btns-left">
+            <PiHeartLight />
+            <PiChatCircleLight />
+            <PiPaperPlaneTiltLight />
+          </div>
+          <div className="btns-right">
+            <PiBookmarkSimpleLight />
+          </div>
         </div>
         <div className="fb-whoLike">
           <p>{likes}님 외에 여러 명이 좋아합니다.</p>

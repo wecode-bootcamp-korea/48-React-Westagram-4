@@ -1,14 +1,18 @@
 import React from "react";
-import "./Main.css";
+import "./Main.scss";
 import Feeds from "../components/Feeds";
 import MainRight from "../components/MainRight";
+import Nav from "../components/Nav/Nav";
 
 const MainDongcheol = () => {
   return (
-    <main className="main">
-      <Feeds />
-      <MainRight />
-    </main>
+    <>
+      <Nav />
+      <main className="main">
+        <Feeds />
+        <MainRight />
+      </main>
+    </>
   );
 };
 
