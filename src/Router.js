@@ -7,8 +7,8 @@ import LoginMihye from "./pages/mihye/Login/login";
 import MainHeejin from "./pages/heejin/Main/main";
 import LoginHeejin from "./pages/heejin/Login/login";
 // Dongcheol 의 컴포넌트
-import MainDongcheol from "./pages/dongcheol/Main/main";
-import LoginDongcheol from "./pages/dongcheol/Login/login";
+import MainDongcheol from "./pages/dongcheol/Main/Main";
+import LoginDongcheol from "./pages/dongcheol/Login/Login";
 
 // jeongwan 의 컴포넌트
 import MainJeongwan from "./pages/jeongwan/Main/main";
