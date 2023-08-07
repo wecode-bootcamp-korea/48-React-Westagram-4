@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 import "./Login.scss";
 import { Link } from "react-router-dom";
@@ -7,6 +7,13 @@ import Nav from "../components/Nav/Nav";
 export default function LoginDongcheol() {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
+  const [btnColor, setBtnColor] = useState("lightgrey");
+
+  useEffect(() => {
+    id.includes("@") && pw.length > 4
+      ? setBtnColor("#3897f0")
+      : setBtnColor("lightgrey");
+  }, [id, pw]);
 
   const saveUserId = (e) => {
     setId(e.target.value);
@@ -41,7 +48,11 @@ export default function LoginDongcheol() {
               required
             />
             <Link to="/dongcheol-main">
-              <input type="submit" value="로그인" />
+              <input
+                type="submit"
+                value="로그인"
+                style={{ backgroundColor: btnColor }}
+              />
             </Link>
           </form>
           <Link className="find-pw" to="/">
