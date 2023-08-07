@@ -5,6 +5,7 @@ import {
   PiBookmarkSimpleLight,
   PiPaperPlaneTiltLight,
 } from "react-icons/pi";
+import Comment from "./Comment";
 
 export default function Article({
   likes,
@@ -79,12 +80,11 @@ export default function Article({
             <button onClick={handleCommentSubmit}>게시</button>
           </div>
           {comments.map((comment, i) => (
-            <div className="fbComments" key={i}>
-              <p>
-                <span>{comment.userId}</span>
-                {comment.content}
-              </p>
-            </div>
+            <Comment
+              userId={comment.userId}
+              content={comment.content}
+              key={i}
+            />
           ))}
         </div>
       </div>
