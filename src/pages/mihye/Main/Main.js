@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState, KeyboardEvent } from "react";
 import "./Main.scss";
 
 const MainMihye = () => {
+  const [commentValue, setCommentValue] = useState();
+  const [addToCommentList, setAddToCommentList] = useState([]);
+
+  const onChange = (e) => {
+    setCommentValue([e.target.value]);
+  };
+
+  const onClick = (e) => {
+    let aa = [...addToCommentList];
+    aa.push(...commentValue);
+    setAddToCommentList(aa);
+    setCommentValue("");
+  };
+
+  const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" || e.target.onClick) {
+      onClick();
+    }
+  };
+  console.log(commentValue);
+  console.log(addToCommentList);
   return (
     <div className="cotainer">
       <nav id="navbar">
@@ -96,15 +117,24 @@ const MainMihye = () => {
             <div className="who_liked">jeongmin님 외 10명이 좋아합니다.</div>
             <div className="comment_box">
               <div className="comment">
-                <p>canon_mj 이미지가 좋으시네요~ 혹시 DM 가능하실까요?</p>
-                <p>aadg_eee 캠핑장 너무 예쁘다ㅠㅠ</p>
+                {addToCommentList.map((a, i) => {
+                  return (
+                    <>
+                      <p>{addToCommentList[i]}</p>
+                    </>
+                  );
+                })}
               </div>
             </div>
             <input
               type="text"
               className="comment_input"
               placeholder="댓글 달기..."
+              onChange={onChange}
+              value={commentValue}
+              onKeyPress={handleKeyPress}
             ></input>
+            <button onClick={onClick}>확인</button>
           </article>
         </div>
         <div className="main_right_box">
