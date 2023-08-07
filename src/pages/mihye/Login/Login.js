@@ -44,7 +44,17 @@ const LoginMihye = () => {
               ></input>
             </div>
 
-            <button type="submit" className="login_button" onClick={goToMain}>
+            <button
+              type="submit"
+              className="login_button"
+              onClick={goToMain}
+              disabled={
+                userDataValue.input_id.includes("@") &&
+                userDataValue.input_password.length >= 5
+                  ? false
+                  : true
+              }
+            >
               로그인
             </button>
           </form>
