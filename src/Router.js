@@ -19,7 +19,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/mihye-main" element={<MainMihye />} />
-        <Route path="/mihye-login" element={<LoginMihye />} />
+        <Route path="/" element={<LoginMihye />} />
         <Route path="/heejin-main" element={<MainHeejin />} />
         <Route path="/heejin-login" element={<LoginHeejin />} />
         <Route path="/dongcheol-main" element={<MainDongcheol />} />
