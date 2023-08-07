@@ -8,13 +8,13 @@ const Login = () => {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate("/main");
+    navigate("/jeongwan-main");
   };
 
   //사용자 입력 데이터 저장
 
-  const [idValue, setId] = useState("");
-  const [pwValue, setPw] = useState("");
+  const [id, setId] = useState("");
+  const [pw, setPw] = useState("");
 
   const saveUserId = (event) => {
     setId(event.target.value);
@@ -26,6 +26,21 @@ const Login = () => {
     // console.log(event.target.value);
   };
 
+  // 버튼 활성화 여부 함수
+
+  // 유효성 검사 함수를 만든다.
+  // 인라인 스타일에 유효성검사 함수가 ture일때 값이 바뀌게 만든다.
+
+  // const validation = () => {
+  //   if (id.includes("@") && pw.length >= 5) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // };
+
+  const validation = id.includes("@") && pw.length >= 5;
+
   return (
     <div className="login">
       <div id="content_wrap">
@@ -36,14 +51,14 @@ const Login = () => {
             className="put"
             type="text"
             name="userName"
-            value={idValue}
+            value={id}
             placeholder="전화번호, 사용자 이름 또는 이메일"
             onChange={saveUserId}
           ></input>
           <input
             className="put"
             type="password"
-            value={pwValue}
+            value={pw}
             placeholder="비밀번호"
             onChange={saveUserPw}
           ></input>
@@ -53,6 +68,13 @@ const Login = () => {
             onClick={goToMain}
             type="submit"
             value="로그인"
+            disabled={!validation} //? true : false}
+            style={{ backgroundColor: validation ? "#67b5fa" : "#b5cde2" }}
+            // // validation ? console.log("true") : console.log("false")
+            // // ? setButtonColor("#67b5fa")
+            // // : setButtonColor("#b5cde2")
+            // ? "backgroundColor : #67b5fa"
+            // : "backgroundColor : #b5cde2"
           ></input>
         </form>
 
