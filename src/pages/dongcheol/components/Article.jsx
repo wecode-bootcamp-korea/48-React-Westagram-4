@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   PiChatCircleLight,
   PiHeartLight,
@@ -13,7 +13,22 @@ export default function Article({
   userImg,
   img,
   content,
+  commentsObj,
 }) {
+  const [comments, setComments] = useState(commentsObj);
+  const [commentValue, setCommentValue] = useState("");
+  const handleComment = (e) => {
+    setCommentValue(e.target.value);
+  };
+  const handleCommentSubmit = () => {
+    if (commentValue === "") {
+      alert("내용을 입력해주세요");
+    } else {
+      setComments([...comments, { userId: "test5", content: commentValue }]);
+      setCommentValue("");
+    }
+  };
+
   return (
     <article>
       <div className="feed-user">
@@ -53,7 +68,24 @@ export default function Article({
           </p>
         </div>
         <div className="fb-input">
-          <input type="text" placeholder="댓글 달기" />
+          <div className="commentSubmit">
+            <input
+              type="text"
+              placeholder="댓글 달기"
+              onChange={handleComment}
+              value={commentValue}
+              style={{ color: "black" }}
+            />
+            <button onClick={handleCommentSubmit}>게시</button>
+          </div>
+          {comments.map((comment, i) => (
+            <div className="fbComments" key={i}>
+              <p>
+                <span>{comment.userId}</span>
+                {comment.content}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </article>

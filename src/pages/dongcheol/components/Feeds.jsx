@@ -2,6 +2,17 @@ import React from "react";
 import Article from "./Article";
 
 export default function Feeds() {
+  const commentsObj = [
+    [
+      { userId: "testUser1", content: "hello" },
+      { userId: "testUser2", content: "goodbye" },
+    ],
+    [
+      { userId: "testUser3", content: "hello" },
+      { userId: "testUser4", content: "goodbye" },
+    ],
+  ];
+
   return (
     <div className="feeds">
       <Article
@@ -13,6 +24,7 @@ export default function Feeds() {
         }
         content={"광안리 해변에서 찍은 광안대교 야경"}
         likes={"wecode_life"}
+        commentsObj={commentsObj[0]}
       />
       <Article
         userId={"wecode_bootcamp"}
@@ -25,6 +37,7 @@ export default function Feeds() {
         }
         content={"Wecode 49기 선착순 모집중!"}
         likes={"wecode_life"}
+        commentsObj={commentsObj[1]}
       />
     </div>
   );
