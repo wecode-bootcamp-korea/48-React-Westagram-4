@@ -7,12 +7,11 @@ import Nav from "../components/Nav/Nav";
 export default function LoginDongcheol() {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
-  const [btnColor, setBtnColor] = useState("lightgrey");
+  const [isRight, setIsRight] = useState(false);
+  let color = isRight ? "#3897f0" : "lightgrey";
 
   useEffect(() => {
-    id.includes("@") && pw.length > 4
-      ? setBtnColor("#3897f0")
-      : setBtnColor("lightgrey");
+    id.includes("@") && pw.length > 4 ? setIsRight(true) : setIsRight(false);
   }, [id, pw]);
 
   const saveUserId = (e) => {
@@ -51,7 +50,8 @@ export default function LoginDongcheol() {
               <input
                 type="submit"
                 value="로그인"
-                style={{ backgroundColor: btnColor }}
+                disabled={!isRight}
+                style={{ backgroundColor: color }}
               />
             </Link>
           </form>
