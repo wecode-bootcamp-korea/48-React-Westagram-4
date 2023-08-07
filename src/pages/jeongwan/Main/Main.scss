@@ -269,8 +269,20 @@ a {
   margin: 15px 0;
 }
 
-.comment {
+.allComment {
   margin: 8px 0;
+}
+
+.comment_area {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
 }
 
 .comment_input {
@@ -282,6 +294,16 @@ a {
   &:focus {
     outline: none;
   }
+}
+
+.inputButton {
+  color: rgb(58, 149, 233);
+  font-size: 14px;
+  width: 30px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  margin-right: 5px;
 }
 
 /* 오른쪽 */

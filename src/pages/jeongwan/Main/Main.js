@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "./Main.scss";
+import { useState } from "react";
 
 const Main = () => {
   // const menu_element = [{
@@ -29,7 +30,24 @@ const Main = () => {
   //   textarea.current.style.height = textarea.current.scrollHeight + "px";
   // };
 
-  // Textarea 자동 높이 조절
+  //실패
+
+  // Input이 생기면 게시 버튼 생기기 없으면 다시 사라지기
+
+  const [inputValue, setInputValue] = useState("");
+
+  const saveInputValue = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const isCommentInput = inputValue;
+
+  // 댓글 추가 기능
+
+  // const addComment = (event) => {
+  //   // list 값을 배열에 저장한다.
+  //   // 그 배열의 요소만큼 map함수로 돌려 li 요소를 만든다.
+  // }
 
   return (
     <div className="main">
@@ -132,20 +150,31 @@ const Main = () => {
                 <div className="text_s">secrecy_shhhh 무더운 이 여름</div>
                 <div className="heart_icon icon_ss"></div>
               </div>
-              <div className="comment">
+              <div className="allComment">
                 <a className="text_s text_gray" href="/">
                   댓글 4개 모두 보기
                 </a>
               </div>
               {/* <div className="text_s text_gray">댓글 달기...</div> */}
               <form>
-                <textarea
-                  id="textarea"
-                  // onClick={handleResizeHeight}
-                  rows={1}
-                  className="comment_input text_s text_gray"
-                  placeholder="댓글 달기..."
-                ></textarea>
+                <div className="comment_area">
+                  {/* {addComment ? <div className='comment_li'></div> : null} */}
+                  <textarea
+                    id="textarea"
+                    // onClick={handleResizeHeight}
+                    value={inputValue}
+                    onChange={saveInputValue}
+                    rows={1}
+                    className="comment_input text_s text_gray"
+                    placeholder="댓글 달기..."
+                  ></textarea>{" "}
+                  {isCommentInput ? (
+                    <div onClick="addComment" className="inputButton text_bold">
+                      게시
+                    </div>
+                  ) : null}
+                  <div className="heart_icon icon_ss"></div>
+                </div>
               </form>
             </div>
           </div>
