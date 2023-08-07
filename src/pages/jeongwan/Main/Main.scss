@@ -269,6 +269,21 @@ a {
   margin: 15px 0;
 }
 
+.comment {
+  margin: 8px 0;
+}
+
+.comment_input {
+  width: 100%;
+  max-height: 18px;
+  border: none;
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 /* 오른쪽 */
 
 .main_right {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Main.scss";
 
 const Main = () => {
@@ -19,6 +19,17 @@ const Main = () => {
   //     </a>
   //   </div>
   // };
+
+  // 댓글 수에 따라 높이 자동 조절
+
+  // const textarea = useRef;
+
+  // const handleResizeHeight = () => {
+  //   textarea.current.style.height = "auto";
+  //   textarea.current.style.height = textarea.current.scrollHeight + "px";
+  // };
+
+  // Textarea 자동 높이 조절
 
   return (
     <div className="main">
@@ -121,12 +132,21 @@ const Main = () => {
                 <div className="text_s">secrecy_shhhh 무더운 이 여름</div>
                 <div className="heart_icon icon_ss"></div>
               </div>
-              <div className="margin_bottom">
+              <div className="comment">
                 <a className="text_s text_gray" href="/">
                   댓글 4개 모두 보기
                 </a>
               </div>
-              <div className="text_s text_gray">댓글 달기...</div>
+              {/* <div className="text_s text_gray">댓글 달기...</div> */}
+              <form>
+                <textarea
+                  id="textarea"
+                  // onClick={handleResizeHeight}
+                  rows={1}
+                  className="comment_input text_s text_gray"
+                  placeholder="댓글 달기..."
+                ></textarea>
+              </form>
             </div>
           </div>
           <div className="article">
@@ -164,7 +184,7 @@ const Main = () => {
                 <div className="text_s">secrecy_shhhh 무더운 이 여름</div>
                 <div className="heart_icon icon_ss"></div>
               </div>
-              <div className="margin_bottom">
+              <div className="comment">
                 <a className="text_s text_gray" href="/">
                   댓글 4개 모두 보기
                 </a>

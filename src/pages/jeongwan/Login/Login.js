@@ -37,7 +37,7 @@ const Login = () => {
   //   } else {
   //     return false;
   //   }
-  // };
+  // };           이게 왜 안되는지 잘 모르겠다...
 
   const validation = id.includes("@") && pw.length >= 5;
 
