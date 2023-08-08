@@ -22,16 +22,16 @@ export default function Article({
     setCommentValue(e.target.value);
   };
   const handleCommentSubmit = () => {
-    if (commentValue === "") {
-      alert("내용을 입력해주세요");
+    setCommentValue("");
+    if (commentValue.replace(/\s/g, "").length < 1) {
+      alert("댓글 내용을 입력해주세요");
     } else {
-      setComments([...comments, { userId: "test5", content: commentValue }]);
-      setCommentValue("");
+      setComments([...comments, { userId: "testUser", content: commentValue }]);
     }
   };
 
   return (
-    <article>
+    <article className="article">
       <div className="feed-user">
         <div className="fu-img">
           <img src={userImg} alt="#" style={{ width: "40px" }} />
@@ -60,7 +60,7 @@ export default function Article({
           </div>
         </div>
         <div className="fb-whoLike">
-          <p>{likes}님 외에 여러 명이 좋아합니다.</p>
+          <p>{likes}</p>
         </div>
         <div className="fb-content">
           <p>
@@ -69,7 +69,7 @@ export default function Article({
           </p>
         </div>
         <div className="fb-input">
-          <div className="commentSubmit">
+          <form className="commentSubmit" action="" method="">
             <input
               type="text"
               placeholder="댓글 달기"
@@ -78,7 +78,7 @@ export default function Article({
               style={{ color: "black" }}
             />
             <button onClick={handleCommentSubmit}>게시</button>
-          </div>
+          </form>
           {comments.map((comment, i) => (
             <Comment
               userId={comment.userId}

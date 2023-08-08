@@ -1,25 +1,23 @@
-import { useEffect, useState } from "react";
-import React from "react";
-import "./Login.scss";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Nav from "../components/Nav/Nav";
+import "./Login.scss";
 
 export default function LoginDongcheol() {
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
-  const [isRight, setIsRight] = useState(false);
-  let color = isRight ? "#3897f0" : "lightgrey";
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    id.includes("@") && pw.length > 4 ? setIsRight(true) : setIsRight(false);
-  }, [id, pw]);
+  const [userInfo, setUserInfo] = useState({
+    userId: "",
+    userPw: "",
+  });
 
-  const saveUserId = (e) => {
-    setId(e.target.value);
+  const handleInput = (e) => {
+    const { value, name } = e.target;
+    setUserInfo({ ...userInfo, [name]: value });
   };
-  const saveUserPw = (e) => {
-    setPw(e.target.value);
-  };
+
+  const isValid = userInfo.userId.includes("@") && userInfo.userPw.length > 4;
+  const color = isValid ? "#3897f0" : "lightgrey";
 
   return (
     <>
@@ -32,28 +30,29 @@ export default function LoginDongcheol() {
           <form action="/login" method="POST">
             <input
               type="text"
-              name="username"
+              name="userId"
               placeholder="전화번호, 사용자 이름 또는 이메일"
-              onChange={saveUserId}
-              value={id}
+              onChange={handleInput}
+              value={userInfo.userId}
               required
             />
             <input
               type="password"
-              name="password"
+              name="userPw"
               placeholder="비밀번호"
-              onChange={saveUserPw}
-              value={pw}
+              onChange={handleInput}
+              value={userInfo.userPw}
               required
             />
-            <Link to="/dongcheol-main">
-              <input
-                type="submit"
-                value="로그인"
-                disabled={!isRight}
-                style={{ backgroundColor: color }}
-              />
-            </Link>
+            <input
+              onClick={() => {
+                navigate("/dongcheol-main");
+              }}
+              type="submit"
+              value="로그인"
+              disabled={!isValid}
+              style={{ backgroundColor: color }}
+            />
           </form>
           <Link className="find-pw" to="/">
             비밀번호를 잊으셨나요?
