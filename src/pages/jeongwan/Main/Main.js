@@ -44,10 +44,11 @@ const Main = () => {
 
   // 댓글 추가 기능
 
-  // const addComment = (event) => {
-  //   // list 값을 배열에 저장한다.
-  //   // 그 배열의 요소만큼 map함수로 돌려 li 요소를 만든다.
-  // }
+  const addComment = (event) => {
+    // list 값을 배열에 저장한다.
+    // 그 배열의 요소만큼 map함수로 돌려 li 요소를 만든다.
+    //도대체 어떻게 해야하는 거야 으아아악
+  };
 
   return (
     <div className="main">
@@ -155,13 +156,19 @@ const Main = () => {
                   댓글 4개 모두 보기
                 </a>
               </div>
-              {/* <div className="text_s text_gray">댓글 달기...</div> */}
+
               <form>
                 <div className="comment_area">
-                  {/* {addComment ? <div className='comment_li'></div> : null} */}
+                  {/* {addComment() ? <div className='comment_li'></div> : null} */}
+                  {/* <div className="comment_box">
+                    <ol>
+                      <li>map으로 돌려서 나와야하는 value값</li>
+                      <li>value값</li>
+                      <li>value값</li>
+                    </ol>
+                  </div> */}
                   <textarea
                     id="textarea"
-                    // onClick={handleResizeHeight}
                     value={inputValue}
                     onChange={saveInputValue}
                     rows={1}
@@ -213,12 +220,32 @@ const Main = () => {
                 <div className="text_s">secrecy_shhhh 무더운 이 여름</div>
                 <div className="heart_icon icon_ss"></div>
               </div>
-              <div className="comment">
+              <div className="allComment">
                 <a className="text_s text_gray" href="/">
                   댓글 4개 모두 보기
                 </a>
               </div>
-              <div className="text_s text_gray">댓글 달기...</div>
+              {/* <div className="text_s text_gray">댓글 달기...</div> */}
+              <form>
+                <div className="comment_area">
+                  {/* {addComment ? <div className='comment_li'></div> : null} */}
+                  <textarea
+                    id="textarea"
+                    // onClick={handleResizeHeight}
+                    value={inputValue}
+                    onChange={saveInputValue}
+                    rows={1}
+                    className="comment_input text_s text_gray"
+                    placeholder="댓글 달기..."
+                  ></textarea>{" "}
+                  {isCommentInput ? (
+                    <div onClick="addComment" className="inputButton text_bold">
+                      게시
+                    </div>
+                  ) : null}
+                  <div className="heart_icon icon_ss"></div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

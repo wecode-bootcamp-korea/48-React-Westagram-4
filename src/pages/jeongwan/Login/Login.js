@@ -17,6 +17,7 @@ const Login = () => {
   const [pw, setPw] = useState("");
 
   const saveUserId = (event) => {
+    // console.log(event.target.value);
     setId(event.target.value);
     // console.log(event.target.value);
   };
@@ -26,19 +27,7 @@ const Login = () => {
     // console.log(event.target.value);
   };
 
-  // 버튼 활성화 여부 함수
-
-  // 유효성 검사 함수를 만든다.
-  // 인라인 스타일에 유효성검사 함수가 ture일때 값이 바뀌게 만든다.
-
-  // const validation = () => {
-  //   if (id.includes("@") && pw.length >= 5) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // };           이게 왜 안되는지 잘 모르겠다...
-
+  //유효성 검사 변수
   const validation = id.includes("@") && pw.length >= 5;
 
   return (
@@ -51,31 +40,28 @@ const Login = () => {
             className="put"
             type="text"
             name="userName"
-            value={id}
+            // value={id}
             placeholder="전화번호, 사용자 이름 또는 이메일"
             onChange={saveUserId}
-          ></input>
+          />
           <input
             className="put"
             type="password"
-            value={pw}
+            // value={pw}
             placeholder="비밀번호"
             onChange={saveUserPw}
-          ></input>
+          />
 
           <input
-            className="login_button"
+            className={
+              validation ? "submit_button button_active" : "submit_button"
+            }
             onClick={goToMain}
             type="submit"
             value="로그인"
-            disabled={!validation} //? true : false}
-            style={{ backgroundColor: validation ? "#67b5fa" : "#b5cde2" }}
-            // // validation ? console.log("true") : console.log("false")
-            // // ? setButtonColor("#67b5fa")
-            // // : setButtonColor("#b5cde2")
-            // ? "backgroundColor : #67b5fa"
-            // : "backgroundColor : #b5cde2"
-          ></input>
+            disabled={!validation}
+            // style={{ backgroundColor: validation ? "#67b5fa" : "#b5cde2" }}
+          />
         </form>
 
         <a herf="#" className="find_password">
