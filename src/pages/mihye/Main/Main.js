@@ -1,6 +1,9 @@
 import React, { useState, KeyboardEvent } from "react";
 import "./Main.scss";
 
+const CommentComponent = (props) => {
+  return <p>{props.comment}</p>;
+};
 const MainMihye = () => {
   const [commentValue, setCommentValue] = useState();
   const [addToCommentList, setAddToCommentList] = useState([]);
@@ -117,10 +120,13 @@ const MainMihye = () => {
             <div className="who_liked">jeongmin님 외 10명이 좋아합니다.</div>
             <div className="comment_box">
               <div className="comment">
-                {addToCommentList.map((a, i) => {
+                {addToCommentList.map((comment, i) => {
                   return (
                     <>
-                      <p>{addToCommentList[i]}</p>
+                      <CommentComponent
+                        comment={comment}
+                        key={i}
+                      ></CommentComponent>
                     </>
                   );
                 })}
