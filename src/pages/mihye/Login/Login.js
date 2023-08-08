@@ -12,6 +12,7 @@ const LoginMihye = () => {
 
   const [userDataValue, setUserDataValue] = useState(userData);
   const { input_id, input_password } = userDataValue;
+
   const onClick = (e) => {
     const { className, value } = e.target;
     setUserDataValue({ ...userDataValue, [className]: value });

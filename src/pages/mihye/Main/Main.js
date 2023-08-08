@@ -10,9 +10,9 @@ const MainMihye = () => {
   };
 
   const onClick = (e) => {
-    let aa = [...addToCommentList];
-    aa.push(...commentValue);
-    setAddToCommentList(aa);
+    let newAddToCommentList = [...addToCommentList];
+    newAddToCommentList.push(...commentValue);
+    setAddToCommentList(newAddToCommentList);
     setCommentValue("");
   };
 
