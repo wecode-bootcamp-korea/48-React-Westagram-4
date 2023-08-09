@@ -9,8 +9,8 @@ const LoginMihye = () => {
   };
 
   const [userDataValue, setUserDataValue] = useState({
-    input_id: "",
-    input_password: "",
+    inputId: "",
+    inputPassword: "",
   });
 
   const handleInput = (e) => {
@@ -19,30 +19,30 @@ const LoginMihye = () => {
   };
 
   let isVaild = () => {
-    return userDataValue.input_id.includes("@") &&
-      userDataValue.input_password.length >= 5
+    return userDataValue.inputId.includes("@") &&
+      userDataValue.inputPassword.length >= 5
       ? false
       : true;
   };
   return (
-    <div className="login">
-      <div className="wrap">
-        <div className="logo">
+    <div className="loginMihye">
+      <div className="loginWrap">
+        <div className="logoText">
           <p>Westagram</p>
         </div>
-        <div className="login_box">
-          <form action="sigh_in.html" method="get" id="form_wrap">
-            <div className="id_box">
+        <div className="login">
+          <form action="sighIn.html" method="get" id="formWrap">
+            <div className="idBox">
               <input
-                className="input_id"
+                className="inputId"
                 type="text"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
                 onChange={handleInput}
               ></input>
             </div>
-            <div className="password_box">
+            <div className="passwordBox">
               <input
-                className="input_password"
+                className="inputPassword"
                 type="password"
                 placeholder="비밀번호"
                 onChange={handleInput}
@@ -51,7 +51,7 @@ const LoginMihye = () => {
 
             <button
               type="submit"
-              className="login_button"
+              className="loginButton"
               onClick={goToMain}
               disabled={isVaild()}
             >
@@ -59,7 +59,7 @@ const LoginMihye = () => {
             </button>
           </form>
         </div>
-        <div className="bottom_text">
+        <div className="buttonText">
           <p>비밀번호를 잊으셨나요?</p>
         </div>
       </div>

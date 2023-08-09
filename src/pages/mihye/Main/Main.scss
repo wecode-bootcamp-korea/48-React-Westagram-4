@@ -18,24 +18,24 @@ ul li {
     align-items: center;
     background-color: white;
 
-    .navbar_home {
+    .navbarHome {
       display: flex;
       align-items: center;
 
-      .navber_home_title_image {
+      .navberHomeTitleImage {
         object-fit: none;
         width: 150px;
         height: auto;
       }
 
-      .navber_home_title_image {
+      .navberHomeTitleImage {
         img {
           width: 150px;
           height: auto;
         }
       }
 
-      .navbar_home_vertical_line {
+      .navbarHomeVerticalLine {
         width: 5px;
         height: 40px;
         border-left: solid;
@@ -46,7 +46,7 @@ ul li {
       }
     }
 
-    .search_box {
+    .searchBox {
       width: 217px;
       height: 25px;
       border-radius: 3px;
@@ -74,7 +74,7 @@ ul li {
       display: inline-block;
     }
 
-    .navbar_icon_box {
+    .navbarIconBox {
       margin: 0 5px;
     }
   }
@@ -94,73 +94,73 @@ ul li {
       margin: 20px 5px;
       background-color: white;
 
-      .user_profile_box {
+      .userProfileBox {
         display: flex;
         align-items: center;
         margin: 10px;
         font-size: 20px;
 
-        .user_profile_img {
+        .userProfileImg {
           width: 50px;
         }
       }
 
-      .feed_image img {
+      .feedImageImg {
         width: 100%;
       }
 
-      .feed_icon_box {
+      .feedIconBox {
         margin-bottom: 2px;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        .feed_icon_left_box img {
+        .feedIconLeftBox img {
           margin: 4px 10px;
         }
 
-        .feed_icon_right_box img {
+        .feedIconRightBox img {
           margin: 4px 10px;
         }
       }
 
-      .who_liked {
+      .whoLiked {
         font-size: 20px;
         margin: 3px 10px;
       }
 
-      .comment_box {
+      .commentBox {
         background-color: white;
         font-size: 20px;
         margin: 14px 10px;
       }
     }
   }
-  .main_right_box {
+  .mainRightBox {
     margin-left: 30px;
     width: 260px;
 
-    .my_account_profile_wrap {
+    .myAccountProfileWrap {
       display: flex;
       align-items: center;
 
-      .my_account_profile_image {
+      .myAccountProfileImage {
         width: 50px;
       }
     }
 
-    .story_list {
+    .storyList {
       border: solid 3px #ededed;
       margin: 30px 0;
     }
 
-    .commend_list {
+    .commendList {
       border: solid 3px #ededed;
     }
   }
 }
 
-.comment_input {
+.commentInput {
   border: solid 2px #ededed;
 
   width: 100%;
@@ -173,20 +173,20 @@ ul li {
 }
 
 @media (max-width: 704px) {
-  .navber_home_title_image {
+  .navberHomeTitleImage {
     display: none;
   }
 }
 
 @media (max-width: 555px) {
-  .navber_home_logo_image,
-  .navbar_home_vertical_line {
+  .navberHomeLogoImage,
+  .navbarHomeVerticalLine {
     display: none;
   }
 }
 
 @media (max-width: 900px) {
-  .main_right_box {
+  .mainRightBox {
     display: none;
   }
 }

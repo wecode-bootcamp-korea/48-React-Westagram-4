@@ -29,43 +29,43 @@ const MainMihye = () => {
   return (
     <div className="cotainer">
       <nav id="navbar">
-        <div className="navbar_home">
-          <div className="navber_home_logo_image">
+        <div className="navbarHome">
+          <div className="navberHomeLogoImage">
             <img src="\images\mihye\logo.png" alt="logo"></img>
           </div>
-          <div className="navbar_home_vertical_line"></div>
-          <div className="navber_home_title_image">
+          <div className="navbarHomeVerticalLine"></div>
+          <div className="navberHomeTitleImage">
             <img
               src="\images\mihye\instagram_logo.png"
-              alt="instagram_logo"
+              alt="instagramLogo"
             ></img>
           </div>
         </div>
 
         <input
-          className="search_box"
-          name="search_box"
+          className="searchBox"
+          name="searchBox"
           placeholder="검색"
         ></input>
 
         <ul>
-          <li className="navbar_icon_box">
+          <li className="navbarIconBox">
             <img
               className="navbar_icon_compass_image"
               src="\images\mihye\compass.png"
               alt="compass"
             ></img>
           </li>
-          <li className="navbar_icon_box">
+          <li className="navbarIconBox">
             <img
-              className="navbar_icon_heart"
+              className="navbarIconHeart"
               src="\images\mihye\heart.png"
               alt="heart"
             ></img>
           </li>
-          <li className="navbar_icon_box">
+          <li className="navbarIconBox">
             <img
-              className="navbar_icon_reels"
+              className="navbarIconReels"
               src="\images\mihye\reels.png"
               alt="reels"
             ></img>
@@ -76,49 +76,49 @@ const MainMihye = () => {
         <div className="feeds">
           <article>
             <div className="user">
-              <div className="user_profile_box">
+              <div className="userProfileBox">
                 <img
-                  className="user_profile_img"
+                  className="userProfileImg"
                   src="\images\mihye\user_profile_image.png"
-                  alt="user_profile_image"
+                  alt="userProfileImage"
                 ></img>
-                <p className="user_nickname">myeee_jeon</p>
+                <p className="userNickname">myeee_jeon</p>
               </div>
             </div>
-            <div className="feed_image">
+            <div className="feedImage">
               <img
                 src="\images\mihye\feeds_image.png"
-                alt="user_feed_image"
+                alt="userFeedImage"
               ></img>
             </div>
-            <div className="feed_icon_box">
-              <div className="feed_icon_left_box">
+            <div className="feedIconBox">
+              <div className="feedIconLeftBox">
                 <img
-                  className="feed_icon_heart"
+                  className="feedIconHeart"
                   src="\images\mihye\heartRed.png"
                   alt="heratred"
                 ></img>
                 <img
-                  className="feed_icon_bubble"
+                  className="feedIconBubble"
                   src="\images\mihye\bubble.png"
                   alt="bubble"
                 ></img>
                 <img
-                  className="feed_icon_export"
+                  className="feedIconExport"
                   src="\images\mihye\export.png"
                   alt="export"
                 ></img>
               </div>
-              <div className="feed_icon_right_box">
+              <div className="feedIconRightBox">
                 <img
-                  className="feed_icon_bookmark"
+                  className="feedIconBookmark"
                   src="\images\mihye\bookmark.png"
                   alt="bookmark"
                 ></img>
               </div>
             </div>
-            <div className="who_liked">jeongmin님 외 10명이 좋아합니다.</div>
-            <div className="comment_box">
+            <div className="whoLiked">jeongmin님 외 10명이 좋아합니다.</div>
+            <div className="commentBox">
               <div className="comment">
                 {addToCommentList.map((comment, i) => {
                   return (
@@ -134,7 +134,7 @@ const MainMihye = () => {
             </div>
             <input
               type="text"
-              className="comment_input"
+              className="commentInput"
               placeholder="댓글 달기..."
               onChange={onChange}
               value={commentValue}
@@ -143,22 +143,22 @@ const MainMihye = () => {
             <button onClick={onClick}>확인</button>
           </article>
         </div>
-        <div className="main_right_box">
-          <div className="my_account_profile_wrap">
+        <div className="mainRightBox">
+          <div className="myAccountProfileWrap">
             <img
-              className="my_account_profile_image"
+              className="myAccountProfileImage"
               src="\images\mihye\user_profile_image.png"
-              alt="my_account"
+              alt="myAccount"
             ></img>
 
-            <p className="my_account_profile_nickname">myeee_jeon</p>
+            <p className="myAccountProfileNickname">myeee_jeon</p>
           </div>
-          <div className="story_list">
+          <div className="storyList">
             <p>스토리~~~~~~~~~~~~</p>
             <p>스토리~~~~~~~~~~~~</p>
             <p>스토리~~~~~~~~~~~~</p>
           </div>
-          <div className="commend_list">
+          <div className="commendList">
             <p>추천친구~~~~~~~~~~~</p>
             <p>추천친구~~~~~~~~~~~</p>
             <p>추천친구~~~~~~~~~~~</p>

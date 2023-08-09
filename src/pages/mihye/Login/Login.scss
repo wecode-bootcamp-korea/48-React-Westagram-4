@@ -1,4 +1,4 @@
-.login {
+.loginMihye {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -7,7 +7,7 @@
   background-color: #f5f5f5;
 }
 
-.wrap {
+.loginWrap {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +18,7 @@
   background-color: white;
 }
 
-.logo {
+.logoText {
   margin-top: 50px;
   margin-bottom: 30px;
   text-align: center;
@@ -26,11 +26,11 @@
   font-family: "Lobster", cursive;
 }
 
-.login_box {
+.loginBox {
   margin: 30px;
 }
 
-.id_box {
+.idBox {
   margin-bottom: 7px;
 }
 
@@ -41,8 +41,8 @@ input::placeholder {
   padding-left: 7px;
 }
 
-.input_id,
-.input_password {
+.inputId,
+.inputPassword {
   width: 300px;
   height: 36px;
   background-color: #f5f5f5;
@@ -52,12 +52,12 @@ input::placeholder {
   border-radius: 3px;
 }
 
-.password_box {
+.passwordBox {
   color: #f5f5f5;
   margin-bottom: 15px;
 }
 
-.login_button {
+.loginButton {
   width: 308px;
   height: 36px;
   border: none;
@@ -68,16 +68,16 @@ input::placeholder {
   font-weight: 600;
 }
 
-.login_button:hover:enabled {
+.loginButton:hover:enabled {
   background-color: #4697f7;
 }
 
-.login_button:disabled {
+.loginButton:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
 
-.bottom_text {
+.buttonText {
   margin: 65px;
   font-size: 14px;
   color: #00489d;
@@ -86,7 +86,7 @@ input::placeholder {
 }
 
 @media (max-width: 2500px) {
-  .wrap {
+  .loginWrap {
     width: 400px;
     height: 480px;
     padding: 10px;
