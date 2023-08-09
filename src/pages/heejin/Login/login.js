@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import "../../../styles/reset.scss";
@@ -9,17 +10,19 @@ import "./Login.scss";
 
 const Login = () => {
   const navigate = useNavigate();
-  // const [userId, setUserId] = useState("");
-  // const [userPw, setUserPw] = useState("");
+  const [userId, setUserId] = useState("");
+  const [userPw, setUserPw] = useState("");
 
-  // const handleId = (e) => {
-  //   const { value } = e.target;
-  //   setUserId(value);
-  // }
-  // const handlePw = (e) => {
-  //   const { value } = e.target;
-  //   setUserId(value);
-  // }
+   const saveUserId = (e) => {
+    setUserId(e.target.value);
+    console.log(userId);
+   }
+
+   const saveUserPw = (e) => {
+    setUserPw(e.target.value);
+    console.log(userPw);
+   }
+
 
   const goToMain = () => {
     navigate('/heejin-main');
@@ -33,14 +36,16 @@ const Login = () => {
         <form>
           <div className="info">
             <input 
+            id="userId"
             type="text" 
-            name="name" 
             placeholder="전화번호, 사용자 이름 또는 이메일"
+            onChange={saveUserId}
             />
             <input 
+            id="userPW"
             type="password" 
-            name="password" 
             placeholder="비밀번호" 
+            onChange={saveUserPw}
             />
             
           </div>
