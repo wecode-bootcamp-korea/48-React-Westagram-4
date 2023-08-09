@@ -349,9 +349,15 @@ a {
   flex-direction: column;
 }
 
-.info ul {
-  width: 100%;
-  margin-bottom: 20px;
+.info {
+  ul {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  a {
+    margin: 4px 4px;
+  }
 }
 
 .recommend {
@@ -360,12 +366,12 @@ a {
   margin-bottom: 10px;
 }
 
-#user_content_wrap {
+#userContentWrap {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .id_wrap {
