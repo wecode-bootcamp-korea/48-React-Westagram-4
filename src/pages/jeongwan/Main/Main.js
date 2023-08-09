@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "./Main.scss";
 import { useState } from "react";
+import Child from "./Child";
 
 const Main = () => {
   //코멘트 값 스테이트
@@ -132,14 +133,7 @@ const Main = () => {
                   댓글 4개 모두 보기
                 </a>
               </div>
-              <ul className="comment_container">
-                {commentList.map((li, index) => (
-                  <li key={index}>
-                    <span className="commentUserName">{li.id}</span>
-                    {li.comment}
-                  </li>
-                ))}
-              </ul>
+              <Child commentValue={commentList} inputValue={inputValue} />
 
               <div className="comment_area">
                 <form className="comment_area">
