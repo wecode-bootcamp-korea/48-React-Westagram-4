@@ -1,5 +1,7 @@
 import React, { useState, KeyboardEvent } from "react";
 import "./Main.scss";
+import Footer from "./Footer";
+import { FOOTER_INFO_LIST } from "./data";
 
 const CommentComponent = (props) => {
   return <p>{props.comment}</p>;
@@ -160,6 +162,9 @@ const MainMihye = () => {
             <p>추천친구~~~~~~~~~~~</p>
             <p>추천친구~~~~~~~~~~~</p>
             <p>추천친구~~~~~~~~~~~</p>
+          </div>
+          <div className="footerBox">
+            <Footer></Footer>
           </div>
         </div>
       </div>

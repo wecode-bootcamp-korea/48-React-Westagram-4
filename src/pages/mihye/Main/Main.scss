@@ -140,6 +140,14 @@ ul li {
     margin-left: 30px;
     width: 260px;
 
+    .footerList {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footerListItem {
+      margin: 10px 5px;
+    }
     .myAccountProfileWrap {
       display: flex;
       align-items: center;
