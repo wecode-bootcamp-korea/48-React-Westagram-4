@@ -22,6 +22,9 @@ const Login = () => {
     setUserPw(e.target.value);
     console.log(userPw);
    }
+   const isValid = userId.includes("@") && userPw.length >= 5
+   
+
 
 
   const goToMain = () => {
@@ -50,7 +53,7 @@ const Login = () => {
             
           </div>
           <div className="button">
-            <button className="loginBtn" onClick={goToMain}>
+            <button className={isValid ? 'loginBtn blue' : 'loginBtn'} onClick={goToMain}>
               로그인
             </button>
           </div>

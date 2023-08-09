@@ -45,9 +45,7 @@
     font-size: 1rem;
     opacity: 0.7;
   
-    &:hover {
-      opacity: 1;
-    }
+    
   }
   
   div.find .findLink {
@@ -56,4 +54,7 @@
     margin-top: 50%;
     text-decoration: none;
     color: darkblue;
+  }
+  .blue {
+    opacity: 1;
   }
