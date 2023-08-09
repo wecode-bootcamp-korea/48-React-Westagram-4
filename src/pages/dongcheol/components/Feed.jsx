@@ -17,7 +17,8 @@ export default function Feed({ feed }) {
     setCommentValue(e.target.value);
   };
 
-  const handleCommentSubmit = () => {
+  const handleCommentSubmit = (e) => {
+    e.preventDefault();
     if (commentValue.replace(/\s/g, "").length < 1) {
       alert("댓글 내용을 입력해주세요");
     } else {
@@ -83,7 +84,7 @@ export default function Feed({ feed }) {
             />
             <button onClick={handleCommentSubmit}>게시</button>
           </form>
-          {feed.comments.map((comment, i) => (
+          {comments.map((comment, i) => (
             <Comment
               key={i}
               userId={comment.userId}
