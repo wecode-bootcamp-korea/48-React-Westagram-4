@@ -8,16 +8,22 @@ const LoginMihye = () => {
     navigate("/mihye-main");
   };
 
-  let userData = { input_id: "", input_password: "" };
-
-  const [userDataValue, setUserDataValue] = useState(userData);
-  const { input_id, input_password } = userDataValue;
+  const [userDataValue, setUserDataValue] = useState({
+    input_id: "",
+    input_password: "",
+  });
 
   const onClick = (e) => {
     const { className, value } = e.target;
     setUserDataValue({ ...userDataValue, [className]: value });
   };
 
+  let isVaild = () => {
+    return userDataValue.input_id.includes("@") &&
+      userDataValue.input_password.length >= 5
+      ? false
+      : true;
+  };
   return (
     <div className="login">
       <div className="wrap">
@@ -31,7 +37,6 @@ const LoginMihye = () => {
                 className="input_id"
                 type="text"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
-                value={input_id}
                 onChange={onClick}
               ></input>
             </div>
@@ -40,7 +45,6 @@ const LoginMihye = () => {
                 className="input_password"
                 type="password"
                 placeholder="비밀번호"
-                value={input_password}
                 onChange={onClick}
               ></input>
             </div>
@@ -49,12 +53,7 @@ const LoginMihye = () => {
               type="submit"
               className="login_button"
               onClick={goToMain}
-              disabled={
-                userDataValue.input_id.includes("@") &&
-                userDataValue.input_password.length >= 5
-                  ? false
-                  : true
-              }
+              disabled={isVaild()}
             >
               로그인
             </button>
