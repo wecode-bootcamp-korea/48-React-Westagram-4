@@ -17,12 +17,12 @@ export default function LoginDongcheol() {
   };
 
   const isValid = userInfo.userId.includes("@") && userInfo.userPw.length > 4;
-  const color = isValid ? "#3897f0" : "lightgrey";
+  // const color = isValid ? "#3897f0" : "lightgrey";
 
   return (
     <>
       <Nav />
-      <div className="login-page">
+      <div className="loginPage">
         <div className="login">
           <div className="logo">
             <img src="/images/dongcheol/instagram_logo.png" alt="instagram" />
@@ -45,16 +45,16 @@ export default function LoginDongcheol() {
               required
             />
             <input
+              className={isValid ? "loginBtn btnActive" : "loginBtn"}
               onClick={() => {
                 navigate("/dongcheol-main");
               }}
               type="submit"
               value="로그인"
               disabled={!isValid}
-              style={{ backgroundColor: color }}
             />
           </form>
-          <Link className="find-pw" to="/">
+          <Link className="findPw" to="/">
             비밀번호를 잊으셨나요?
           </Link>
           <br />

@@ -1,9 +1,6 @@
-.login-page {
+.loginPage {
   font-family: Arial, sans-serif;
   text-align: center;
-}
-
-.login-page {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -31,18 +28,21 @@ input[type="password"] {
   border-radius: 5px;
   border: 1px solid lightgray;
 }
-input[type="submit"] {
+.loginBtn {
   width: 70%;
   padding: 10px;
-  // background-color: #3897f0;
+  background-color: lightgrey;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin: 5px auto 70px auto;
 }
+.btnActive {
+  background-color: #3897f0;
+}
 
-.find-pw {
+.findPw {
   display: inline-flex;
   margin-bottom: 30px;
   text-decoration: none;

@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Comment({ userId, content, key }) {
+export default function Comment({ userId, content }) {
   return (
-    <div className="fbComments" key={key}>
+    <div className="fbComments">
       <p>
         <span>{userId}</span>
         {content}
