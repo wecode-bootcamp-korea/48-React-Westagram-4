@@ -24,8 +24,7 @@ const MainMihye = () => {
       onClick();
     }
   };
-  console.log(commentValue);
-  console.log(addToCommentList);
+
   return (
     <div className="cotainer">
       <nav id="navbar">
