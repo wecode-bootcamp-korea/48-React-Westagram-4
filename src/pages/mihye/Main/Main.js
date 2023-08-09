@@ -120,14 +120,12 @@ const MainMihye = () => {
             <div className="whoLiked">jeongmin님 외 10명이 좋아합니다.</div>
             <div className="commentBox">
               <div className="comment">
-                {addToCommentList.map((comment, i) => {
+                {addToCommentList.map((comment, index) => {
                   return (
-                    <>
-                      <CommentComponent
-                        comment={comment}
-                        key={i}
-                      ></CommentComponent>
-                    </>
+                    <CommentComponent
+                      comment={comment}
+                      key={index}
+                    ></CommentComponent>
                   );
                 })}
               </div>
