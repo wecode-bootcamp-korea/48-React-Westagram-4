@@ -13,7 +13,7 @@ const LoginMihye = () => {
     input_password: "",
   });
 
-  const onClick = (e) => {
+  const handleInput = (e) => {
     const { className, value } = e.target;
     setUserDataValue({ ...userDataValue, [className]: value });
   };
@@ -37,7 +37,7 @@ const LoginMihye = () => {
                 className="input_id"
                 type="text"
                 placeholder="전화번호, 사용자 이름 또는 이메일"
-                onChange={onClick}
+                onChange={handleInput}
               ></input>
             </div>
             <div className="password_box">
@@ -45,7 +45,7 @@ const LoginMihye = () => {
                 className="input_password"
                 type="password"
                 placeholder="비밀번호"
-                onChange={onClick}
+                onChange={handleInput}
               ></input>
             </div>
 
