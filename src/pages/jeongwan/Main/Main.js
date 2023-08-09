@@ -3,51 +3,27 @@ import "./Main.scss";
 import { useState } from "react";
 
 const Main = () => {
-  // const menu_element = [{
-  //   id : 1,
-  //   class : menu_element
-  //   img : ""
-  //   title : 홈
-  // },{}]
-
-  // menu_element.map(item,index){
-  //   console.log(item);
-
-  //   <div>
-  //     <a>
-  //       <div></div>
-  //       <span></span>
-  //     </a>
-  //   </div>
-  // };
-
-  // 댓글 수에 따라 높이 자동 조절
-
-  // const textarea = useRef;
-
-  // const handleResizeHeight = () => {
-  //   textarea.current.style.height = "auto";
-  //   textarea.current.style.height = textarea.current.scrollHeight + "px";
-  // };
-
-  //실패
-
-  // Input이 생기면 게시 버튼 생기기 없으면 다시 사라지기
-
+  //코멘트 값 스테이트
   const [inputValue, setInputValue] = useState("");
 
+  //코멘트 리스트 배열 스테이트
+  const [commentList, setCommentList] = useState([]);
+
+  //코멘트 값
   const saveInputValue = (event) => {
     setInputValue(event.target.value);
+    console.log("값이 바뀌었다!");
   };
 
+  //인풋 값이 존재하면 게시 버튼 나타나기 ( 존재 여부 : ture/ false)
   const isCommentInput = inputValue;
 
-  // 댓글 추가 기능
-
-  const addComment = (event) => {
-    // list 값을 배열에 저장한다.
-    // 그 배열의 요소만큼 map함수로 돌려 li 요소를 만든다.
-    //도대체 어떻게 해야하는 거야 으아아악
+  const makeComment = (event) => {
+    const commentEl = {
+      id: "wecode",
+      comment: inputValue,
+    };
+    setCommentList([...commentList, commentEl]);
   };
 
   return (
@@ -156,96 +132,38 @@ const Main = () => {
                   댓글 4개 모두 보기
                 </a>
               </div>
+              <ul className="comment_container">
+                {commentList.map((li, index) => (
+                  <li key={index}>
+                    <span className="commentUserName">{li.id}</span>
+                    {li.comment}
+                  </li>
+                ))}
+              </ul>
 
-              <form>
-                <div className="comment_area">
-                  {/* {addComment() ? <div className='comment_li'></div> : null} */}
-                  {/* <div className="comment_box">
-                    <ol>
-                      <li>map으로 돌려서 나와야하는 value값</li>
-                      <li>value값</li>
-                      <li>value값</li>
-                    </ol>
-                  </div> */}
-                  <textarea
+              <div className="comment_area">
+                <form className="comment_area">
+                  <input
                     id="textarea"
                     value={inputValue}
                     onChange={saveInputValue}
                     rows={1}
                     className="comment_input text_s text_gray"
                     placeholder="댓글 달기..."
-                  ></textarea>{" "}
+                  />
                   {isCommentInput ? (
-                    <div onClick="addComment" className="inputButton text_bold">
+                    <button
+                      type="button"
+                      onClick={makeComment}
+                      className="inputButton text_bold"
+                    >
                       게시
-                    </div>
+                    </button>
                   ) : null}
-                  <div className="heart_icon icon_ss"></div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div className="article">
-            <div className="article_top">
-              <div className="left">
-                <div className="profile_img "></div>
-                <div className="margin_left">
-                  <span className="user_id text_bold">wecode_zzang</span>
-                  <span className="date"> · 1일</span>
-                </div>
-              </div>
+                </form>
 
-              <div className="right icon_m more_icon"></div>
-            </div>
-
-            <div className="main_img">
-              <div className="img_src"></div>
-            </div>
-
-            <div className="article_text_wrap">
-              <div className="article_icon margin_bottom">
-                <div className="left">
-                  <div className="icon margin_right heart_icon"></div>
-
-                  <div className="icon margin_right talk_icon"></div>
-
-                  <div className="icon margin_right airplane_icon"></div>
-                </div>
-
-                <div className="icon_ss bookmark_icon"></div>
-              </div>
-
-              <div className="text_s text_bold margin_bottom">좋아요 15개</div>
-              <div className="space_between">
-                <div className="text_s">secrecy_shhhh 무더운 이 여름</div>
                 <div className="heart_icon icon_ss"></div>
               </div>
-              <div className="allComment">
-                <a className="text_s text_gray" href="/">
-                  댓글 4개 모두 보기
-                </a>
-              </div>
-              {/* <div className="text_s text_gray">댓글 달기...</div> */}
-              <form>
-                <div className="comment_area">
-                  {/* {addComment ? <div className='comment_li'></div> : null} */}
-                  <textarea
-                    id="textarea"
-                    // onClick={handleResizeHeight}
-                    value={inputValue}
-                    onChange={saveInputValue}
-                    rows={1}
-                    className="comment_input text_s text_gray"
-                    placeholder="댓글 달기..."
-                  ></textarea>{" "}
-                  {isCommentInput ? (
-                    <div onClick="addComment" className="inputButton text_bold">
-                      게시
-                    </div>
-                  ) : null}
-                  <div className="heart_icon icon_ss"></div>
-                </div>
-              </form>
             </div>
           </div>
         </div>
@@ -270,7 +188,7 @@ const Main = () => {
             <span className="text_ss text_semibold">모두 보기</span>
           </div>
           {/* 추천계정목록 */}
-          <div id="user_content_wrap">
+          <div id="user_contentWrap">
             {/* 아래 유저들 */}
             <div className="user_el">
               <div className="left">

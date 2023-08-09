@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-#content_wrap {
+#contentWrap {
   /* background-color: gainsboro; */
   border: 1px solid lightgray;
   display: flex;
@@ -26,14 +26,14 @@
   height: 400px;
 }
 
-.logo_name {
+.logoName {
   font-family: "Lobster", cursive;
   font-size: 40px;
   margin-top: 25px;
   margin-bottom: 12px;
 }
 
-.input_wrap {
+.inputWrap {
   display: flex;
   /* background-color: burlywood; */
   flex-direction: column;
@@ -56,7 +56,7 @@
   }
 }
 
-.submit_button {
+.submitButton {
   color: white;
   font-weight: bold;
   width: 260px;
@@ -66,12 +66,12 @@
   margin-top: 10px;
 }
 
-.button_active {
+.buttonActive {
   background-color: #67b5fa;
   // !important   << 없어도 되는 이유 : 상단에서 하단으로 내려갈수록 우선순위가 높아짐 = 나중에 선언된 것의 우선순위가 더 높음
 }
 
-.find_password {
+.findPassword {
   color: #00376b;
   font-size: 12px;
   margin-top: 100px;
@@ -79,6 +79,6 @@
 }
 
 a,
-.login_button {
+.loginButton {
   cursor: pointer;
 }
