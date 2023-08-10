@@ -1,7 +1,8 @@
 import "./Main.scss";
 import { useState } from "react";
 import User from "./components/User";
-import { FOOTER_INFO_LIST } from "./data";
+import { FOOTER_INFO_LIST } from "./FooterData";
+import { NAV_LIST } from "./NavData";
 import Feed from "./components/Feed";
 
 const Main = () => {
@@ -33,54 +34,14 @@ const Main = () => {
         </a>
 
         <div className="interface ">
-          <div className="menuElement">
-            <a href="/">
-              <div className="icon homeIcon"></div>
-              <span className="iconText">홈</span>
-            </a>
-          </div>
-
-          <div className="menuElement">
-            <a href="/">
-              <div className="icon homeIcon"></div>
-              <div className="iconText">검색</div>
-            </a>
-          </div>
-
-          <div className="menuElement">
-            <a href="/">
-              <div className="icon homeIcon"></div>
-              <span className="iconText">탐색</span>
-            </a>
-          </div>
-
-          <div className="menuElement">
-            <a href="/">
-              <div className="icon homeIcon"></div>
-              <span className="iconText">릴스</span>
-            </a>
-          </div>
-
-          <div className="menuElement">
-            <a href="/">
-              <div className="icon homeIcon"></div>
-              <span className="iconText">메세지</span>
-            </a>
-          </div>
-
-          <div className="menuElement">
-            <a href="/">
-              <div className="icon homeIcon"></div>
-              <span className="iconText">알림</span>
-            </a>
-          </div>
-
-          <div className="menuElement">
-            <a href="/">
-              <div className="icon homeIcon"></div>
-              <span className="iconText">프로필</span>
-            </a>
-          </div>
+          {NAV_LIST.map((i, index) => (
+            <div className="menuElement">
+              <a key={i.id} href={i.link}>
+                <div className={`icon ${i.iconName}`}></div>
+                <span className="iconText"> {i.text}</span>
+              </a>
+            </div>
+          ))}
         </div>
         <div className="hambugerBar">
           <div className="icon moreIcon"></div>

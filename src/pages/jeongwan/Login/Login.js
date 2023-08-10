@@ -54,6 +54,7 @@ const Login = () => {
             type="submit"
             value="로그인"
             disabled={!validation}
+            cursor
           />
         </form>
 
