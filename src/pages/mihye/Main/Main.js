@@ -38,14 +38,14 @@ const Feed = (props) => {
           <div className="userProfileBox">
             <img
               className="userProfileImg"
-              src={props.feedUserProfile}
+              src={props.feedData.userProfile}
               alt="userProfileImage"
             ></img>
-            <p className="userNickname">{props.feedUserName}</p>
+            <p className="userNickname">{props.feedData.userName}</p>
           </div>
         </div>
         <div className="feedImage">
-          <img src={props.feedImages} alt="userFeedImage"></img>
+          <img src={props.feedData.feedImages} alt="userFeedImage"></img>
         </div>
         <div className="feedIconBox">
           <div className="feedIconLeftBox">
@@ -74,12 +74,12 @@ const Feed = (props) => {
           </div>
         </div>
         <div className="whoLiked">
-          jeongmin님 외 {props.feedLikeCount}명이 좋아합니다.
+          jeongmin님 외 {props.feedData.likeCount}명이 좋아합니다.
         </div>
-        <div className="contentBox">{props.feedContent}</div>
+        <div className="contentBox">{props.feedData.content}</div>
         <div className="commentBox">
           <div className="comment">
-            {props.feedCommentsArray.map((w) => {
+            {props.feedData.comments.map((w) => {
               return (
                 <CommentComponent
                   key={w.commentId}
@@ -131,24 +131,11 @@ const Feeds = () => {
         setFeedDataList(data);
       });
   }, []);
-  //[ {1번데이터}, {2번데이터}, {3번데이터}]
+
   return (
     <div className="feeds">
       {feedDataList?.data.map((feedData, i) => {
-        return (
-          <Feed
-            feedData={feedData}
-            feedId={feedData.id}
-            feedUserName={feedData.userName}
-            feedUserProfile={feedData.userProfile}
-            feedLocation={feedData.location}
-            feedImages={feedData.feedImages}
-            feedLikeCount={feedData.likeCount}
-            feedContent={feedData.content}
-            feedCommentsArray={feedData.comments}
-            feedCreatedAt={feedData.createdAt}
-          ></Feed>
-        );
+        return <Feed feedData={feedData} key={feedData.id}></Feed>;
       })}
     </div>
   );
@@ -203,7 +190,9 @@ const MainMihye = (props) => {
       </nav>
       <div className="main">
         <Feeds></Feeds>
-
+        {
+          //TODO 컴포넌트 공통화
+        }
         <div className="mainRightBox">
           <div className="myAccountProfileWrap">
             <img
