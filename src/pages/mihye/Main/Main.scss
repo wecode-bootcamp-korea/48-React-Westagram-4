@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+.cotainer {
+  margin: 30px 60px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+    .navbarHome {
+      display: flex;
+      align-items: center;
+
+      .navberHomeTitleImage {
+        object-fit: none;
+        width: 150px;
+        height: auto;
+      }
+
+      .navberHomeTitleImage {
+        img {
+          width: 150px;
+          height: auto;
+        }
+      }
+
+      .navbarHomeVerticalLine {
+        width: 5px;
+        height: 40px;
+        border-left: solid;
+        border-color: black;
+        border-width: 2px;
+        margin-left: 9px;
+        margin-bottom: 4.5px;
+      }
+    }
+
+    .searchBox {
+      width: 217px;
+      height: 25px;
+      border-radius: 3px;
+      border: 1px solid grey;
+      background-color: #f5f5f5;
+    }
+
+    input[name="search_box"]::placeholder {
+      color: grey;
+      opacity: 1;
+      text-align: center;
+    }
+
+    input[name="search_box"]::-webkit-input-placeholder {
+      background-image: url("../../../assets/logo_image/search.png");
+      background-size: contain;
+      background-position: 1px center;
+      background-repeat: no-repeat;
+      text-align: center;
+      text-indent: 0;
+    }
+
+    ul,
+    li {
+      display: inline-block;
+    }
+
+    .navbarIconBox {
+      margin: 0 5px;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+
+  .feeds {
+    border: solid 3px #ededed;
+    border-radius: 4px;
+
+    article {
+      background-color: white;
+      margin: 20px 5px;
+      background-color: white;
+      width: 1000px;
+
+      .userProfileBox {
+        display: flex;
+        align-items: center;
+        margin: 8px 10px 17px 10px;
+        font-size: 20px;
+
+        .userNickname {
+          margin-right: 20px;
+          font-weight: 600;
+        }
+        .userProfileImg {
+          width: 32px;
+
+          height: 32px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+      }
+
+      .feedImage {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .feedIconBox {
+        margin-bottom: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .feedIconLeftBox img {
+          margin: 4px 10px;
+        }
+
+        .feedIconRightBox img {
+          margin: 4px 10px;
+        }
+      }
+
+      .whoLiked {
+        font-size: 20px;
+        margin: 3px 10px;
+      }
+
+      .commentBox {
+        background-color: white;
+        font-size: 20px;
+        margin: 14px 10px;
+      }
+
+      .commentData {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
+      }
+
+      .commentUserProfileImg {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .commentUserName {
+        margin-right: 20px;
+        font-weight: 600;
+      }
+    }
+
+    .contentBox {
+      margin: 15px 10px 15px 5px;
+      font-size: 20px;
+      width: 100%;
+    }
+  }
+  .mainRightBox {
+    margin-left: 30px;
+    width: 260px;
+
+    .footerList {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .footerListItem {
+      margin: 10px 5px;
+    }
+    .myAccountProfileWrap {
+      display: flex;
+      align-items: center;
+
+      .myAccountProfileImage {
+        width: 50px;
+      }
+    }
+    .myAccountProfileWrap {
+      margin: 8px;
+    }
+    .storyList {
+      border: solid 3px #ededed;
+      margin: 30px 0;
+    }
+
+    .commendList {
+      border: solid 3px #ededed;
+    }
+  }
+}
+
+.commentInput {
+  border: solid 2px #ededed;
+
+  width: 100%;
+  height: 50px;
+}
+
+.commentLabelTag {
+  position: relative;
+
+  .commentAddButton {
+    position: absolute;
+    width: 50px;
+    height: 35px;
+    top: -5px;
+    right: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .cotainer {
+    margin: 30px 30px;
+  }
+}
+
+@media (max-width: 704px) {
+  .navberHomeTitleImage {
+    display: none;
+  }
+}
+
+@media (max-width: 555px) {
+  .navberHomeLogoImage,
+  .navbarHomeVerticalLine {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .mainRightBox {
+    display: none;
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "userName": "jeonmihye",
+      "userProfile": "https://source.unsplash.com/random/?singer",
+      "location": "wecode",
+      "feedImages": ["https://source.unsplash.com/random/300×301"],
+      "isLike": false,
+      "likeCount": 13,
+      "content": "카눈 지나가고 8월 15일에 오는 태풍 🌀란🌀 예상경로! 다행히 아직 한국은 괜찮다고 함!! @@태풍 언제 끝나ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ",
+      "comments": [
+        {
+          "commentId": 1,
+          "userName": "최우식",
+          "userProfile": "https://source.unsplash.com/random/?superstar",
+          "comment": "위코드 너무 재미있엉",
+          "createdAt": "2023-07-27T21:26:17Z"
+        },
+        {
+          "commentId": 2,
+          "userName": "yujin_star",
+          "userProfile": "https://source.unsplash.com/random/?papa",
+          "comment": "아~~~~~~~~~캠핑 가고 싶다!",
+          "createdAt": "2023-07-27T19:26:17Z"
+        }
+      ],
+      "createdAt": "2023-07-27T19:26:17Z"
+    },
+
+    {
+      "id": 2,
+      "userName": "wecode_life",
+      "userProfile": "https://source.unsplash.com/random/?cat",
+      "location": "wecode",
+      "feedImages": ["https://source.unsplash.com/random/300×300"],
+      "isLike": false,
+      "likeCount": 28,
+      "content": "[스윗가득♥️] 말투부터 표정, 행동까지 스윗함이 뚝뚝 떨어지는 엄지원💕 나도 이런 언니, 누나 있으면 좋겠다....🙏🏻",
+      "comments": [
+        {
+          "commentId": 1,
+          "userName": "loveyou<3",
+          "userProfile": "https://source.unsplash.com/random/?puppy",
+          "comment": "지금 먹고싶은 것 : 치킨, 초밥, 잡채밥",
+          "createdAt": "2023-07-27T21:26:17Z"
+        },
+        {
+          "commentId": 2,
+          "userName": "algp1205",
+          "userProfile": "https://source.unsplash.com/random/?boy",
+          "comment": "이미지가 너무 좋으신데 DM부탁드려도 될까요?",
+          "createdAt": "2023-07-27T19:26:17Z"
+        }
+      ],
+      "createdAt": "2023-07-27T19:26:17Z"
+    },
+
+    {
+      "id": 3,
+      "userName": "abcdefg",
+      "userProfile": "https://source.unsplash.com/random/?girl",
+      "location": "wecode",
+      "feedImages": ["https://source.unsplash.com/random/301×300"],
+      "isLike": false,
+      "likeCount": 99,
+      "content": "순간 눈 돌아서 케이크에 달려드는거 넘 귀엽네 ㅋㅋㅋㅋㅋㅋㅋ출처 유튜브 푸우형             #우리집 #강아지 #댕댕이 #귀여워 #강아지스타그램#고양희 #고양이 #야옹이 #대박 #좋아요",
+      "comments": [
+        {
+          "commentId": 1,
+          "userName": "pliossun",
+          "userProfile": "https://source.unsplash.com/random/?men",
+          "comment": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ아 웃겨",
+          "createdAt": "2023-07-27T21:26:17Z"
+        },
+        {
+          "commentId": 2,
+          "userName": "wecode_founder",
+          "userProfile": "https://source.unsplash.com/random/?women",
+          "comment": "주말에 뭐먹징?????",
+          "createdAt": "2023-07-27T19:26:17Z"
+        }
+      ],
+      "createdAt": "2023-07-27T19:26:17Z"
+    }
+  ]
+}
