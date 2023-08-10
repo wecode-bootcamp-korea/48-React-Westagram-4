@@ -1,0 +1,421 @@
+// @import "../../styles/variables.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav {
+  min-width: 190px;
+
+  width: 17vw;
+  height: 100%;
+
+  border-right: 1px solid lightgray;
+  padding: 8px 12px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo_wrap {
+  flex-grow: 1;
+}
+
+.logo {
+  color: black;
+  font-size: 25px;
+  font-family: "Lobster", cursive;
+  cursor: pointer;
+  margin-bottom: 19px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/* 아이콘  */
+
+.interface {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 4;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menuElement {
+  width: auto;
+  height: auto;
+  padding: 12px;
+  margin: 4px 0;
+
+  a {
+    @include flexRow;
+  }
+
+  &:hover {
+    background-color: rgb(229, 229, 229);
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  &:hover .icon {
+    scale: 110%;
+  }
+}
+
+.icon {
+  width: 27px;
+  height: 20px;
+  background-repeat: no-repeat;
+}
+
+.iconText {
+  font-size: 17px;
+  color: black;
+  margin-left: 14px;
+  line-height: 20px;
+}
+
+.hambugerBar {
+  width: 100%;
+  height: auto;
+  /* margin-top: 500px; */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* 아이콘이미지 */
+
+.homeIcon {
+  background-image: url("../../../assets/img/house-solid.svg");
+}
+
+.moreIcon {
+  background-image: url("../../../assets/img/bars-solid.svg");
+}
+
+.badgeIcon {
+  background-image: url("../../../assets/img/certificate-solid.svg");
+  margin-left: 5px;
+}
+
+.heartIcon {
+  background-image: url("../../../assets/img/heart-regular.svg");
+}
+
+.talkIcon {
+  background-image: url("../../../assets/img/comment-regular.svg");
+}
+
+.airplaneIcon {
+  background-image: url("../../../assets/img/paper-plane-regular.svg");
+}
+
+.bookmarkIcon {
+  background-image: url("../../../assets/img/bookmark-regular.svg");
+}
+
+.blank {
+  width: 17vw;
+  height: 100%;
+  min-width: 190px;
+}
+
+.mainWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.feeds {
+  width: 600px;
+  height: 100%;
+  /* background-color: pink; */
+  margin-right: 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 7vw;
+}
+
+.article {
+  width: 470px;
+  /* height: 468px; */
+  height: auto;
+  /* border: 1px solid lightgray; */
+  border-bottom: 1px solid lightgray;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.mainImg {
+  width: 100%;
+  height: 468px;
+  /* margin-bottom: 10px; */
+}
+
+.imgSrc {
+  width: 100%;
+  height: 100%;
+  background-color: #d7d7d7;
+  background-image: url(../../../assets/img/main_img.jpg);
+  background-size: cover;
+}
+
+.articleTop {
+  display: flex;
+  width: 100%;
+  height: 56px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  /* padding: 0 8px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right {
+  padding: 0px 8px;
+}
+.profileImg {
+  width: 32px;
+  height: 32px;
+  background-color: black;
+  border-radius: 50%;
+  background-image: url("../../../assets/img/profile.jpeg");
+  background-size: cover;
+  border: 1px solid lightgray;
+}
+
+.iconS {
+  height: 10px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.iconM {
+  width: 30px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.iconSs {
+  width: 20px;
+  background-repeat: no-repeat;
+}
+
+.marginRight {
+  margin-right: 15px;
+}
+
+.marginLeft {
+  margin-left: 13px;
+}
+.marginBottom {
+  margin-bottom: 8px;
+}
+
+.date {
+  font-size: 10px;
+}
+
+.articleIcon {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.allComment {
+  margin: 8px 0;
+}
+
+.commentContainer {
+  width: 100&;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.commentArea {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.commentInput {
+  width: 100%;
+  max-height: 18px;
+  border: none;
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.inputButton {
+  color: rgb(58, 149, 233);
+  font-size: 14px;
+  width: 30px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  margin-right: 5px;
+  background-color: transparent;
+}
+
+.commentUserName {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* 오른쪽 */
+
+.mainRight {
+  width: 320px;
+  height: auto;
+  /* background-color: lightgray; */
+  padding-top: 30px;
+}
+
+.accountWrap {
+  display: flex;
+  width: 100%;
+  height: 56px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 10px 0;
+}
+
+.profileImgBig {
+  width: 55px;
+  height: 55px;
+  /* background-color: black; */
+  border-radius: 50%;
+  background-image: url("../../../assets/img/profile.jpeg");
+  background-size: cover;
+  border: 1px solid lightgray;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  ul {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  a {
+    margin: 4px 4px;
+  }
+}
+
+.recommend {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#userContentWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.idWrap {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.userEl {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px 0;
+  align-items: center;
+}
+
+/* 텍스트 클래스  */
+
+.textSs {
+  font-size: 12px;
+}
+
+.textS {
+  font-size: 14px;
+}
+
+.textBold {
+  font-weight: bold;
+}
+
+.textSemibold {
+  font-weight: 600;
+}
+
+.textGray {
+  color: rgb(133, 133, 133);
+}
+
+.textLightgray {
+  color: rgb(182, 182, 182);
+}
+
+.textBlue {
+  color: rgb(112, 186, 255);
+}
