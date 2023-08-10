@@ -1,0 +1,60 @@
+.loginPage {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.login {
+  width: 380px;
+  border: 1px solid lightgray;
+  margin-top: 30px;
+}
+
+.logo {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.logo img {
+  width: 55%;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+.loginBtn {
+  width: 70%;
+  padding: 10px;
+  background-color: lightgrey;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px auto 70px auto;
+}
+.btnActive {
+  background-color: #3897f0;
+}
+
+.findPw {
+  display: inline-flex;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(3, 3, 181, 0.966);
+}
+.toSignUp {
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: purple;
+}

@@ -1,0 +1,48 @@
+[33mcommit 0bfc39ccf7d6e36236d8ca7cb2cf913f6c543718[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/48-dongcheolpark[m[33m, [m[1;31morigin/feature/48-dongcheolpark[m[33m)[m
+Author: DongCheol PARK <pksam5046@naver.com>
+Date:   Sat Aug 5 15:41:50 2023 +0900
+
+    Modify : 파일 이전 + 전체 파일 임포트 주소 변경
+
+[33mcommit c937008507bbd4ac9b742f12821d0cf9976f05b6[m
+Merge: 500a966 6d1c889
+Author: DongCheol PARK <pksam5046@naver.com>
+Date:   Sat Aug 5 14:23:22 2023 +0900
+
+    Merge branch 'main' into feature/48-dongcheolpark
+
+[33mcommit 500a966176a852c6bd06d3f685055bfa312c74d3[m
+Author: DongCheol PARK <pksam5046@naver.com>
+Date:   Sat Aug 5 14:22:04 2023 +0900
+
+    wip
+
+[33mcommit 6d1c889461f67b96882217389752761fa6c9c77a[m[33m ([m[1;31mupstream/main[m[33m, [m[1;31mupstream/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: wanwork <wjdqo9705@gmail.com>
+Date:   Fri Aug 4 17:22:01 2023 +0900
+
+    Add: "초기 파일 세팅 완료 8/4 5pm"
+
+[33mcommit 5680a7e04476e6f6ed37c4beabe52d60461d3c2d[m
+Author: wanwork <wjdqo9705@gmail.com>
+Date:   Fri Aug 4 17:03:32 2023 +0900
+
+    Add: "초기 세팅 완료 8/4 5pm"
+
+[33mcommit f6be768a68f51a342c3e3c4a5fae5e591665141e[m
+Author: wanwork <wjdqo9705@gmail.com>
+Date:   Fri Aug 4 15:06:23 2023 +0900
+
+    ADD : 초기세팅 완료
+
+[33mcommit b08bc08fb46932660a12d4dee26dff8f12d2df65[m
+Author: yoonl <70797985+5yoonl@users.noreply.github.com>
+Date:   Fri Aug 4 14:34:32 2023 +0900
+
+    Create pull_request_template.md
+
+[33mcommit 2d82587629a57d9c126e16ac5577aedeff373197[m
+Author: wanwork <wjdqo9705@gmail.com>
+Date:   Fri Aug 4 14:17:23 2023 +0900
+
+    Add: westagram 초기세팅 완료
