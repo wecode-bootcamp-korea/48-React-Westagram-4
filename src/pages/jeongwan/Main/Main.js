@@ -1,7 +1,5 @@
-// import React, { useRef } from "react";
 import "./Main.scss";
 import { useState } from "react";
-// import Comment from "./components/Comment";
 import User from "./components/User";
 import { FOOTER_INFO_LIST } from "./data";
 import Feed from "./components/Feed";
@@ -30,67 +28,67 @@ const Main = () => {
   return (
     <div className="main">
       <nav className="nav">
-        <a className="logo_wrap" href="/">
+        <a className="logoWrap" href="/">
           <h1 className="logo">westagram</h1>
         </a>
 
         <div className="interface ">
-          <div className="menu_element">
+          <div className="menuElement">
             <a href="/">
-              <div className="icon home_icon"></div>
-              <span className="icon_text">홈</span>
+              <div className="icon homeIcon"></div>
+              <span className="iconText">홈</span>
             </a>
           </div>
 
-          <div className="menu_element">
+          <div className="menuElement">
             <a href="/">
-              <div className="icon home_icon"></div>
-              <div className="icon_text">검색</div>
+              <div className="icon homeIcon"></div>
+              <div className="iconText">검색</div>
             </a>
           </div>
 
-          <div className="menu_element">
+          <div className="menuElement">
             <a href="/">
-              <div className="icon home_icon"></div>
-              <span className="icon_text">탐색</span>
+              <div className="icon homeIcon"></div>
+              <span className="iconText">탐색</span>
             </a>
           </div>
 
-          <div className="menu_element">
+          <div className="menuElement">
             <a href="/">
-              <div className="icon home_icon"></div>
-              <span className="icon_text">릴스</span>
+              <div className="icon homeIcon"></div>
+              <span className="iconText">릴스</span>
             </a>
           </div>
 
-          <div className="menu_element">
+          <div className="menuElement">
             <a href="/">
-              <div className="icon home_icon"></div>
-              <span className="icon_text">메세지</span>
+              <div className="icon homeIcon"></div>
+              <span className="iconText">메세지</span>
             </a>
           </div>
 
-          <div className="menu_element">
+          <div className="menuElement">
             <a href="/">
-              <div className="icon home_icon"></div>
-              <span className="icon_text">알림</span>
+              <div className="icon homeIcon"></div>
+              <span className="iconText">알림</span>
             </a>
           </div>
 
-          <div className="menu_element">
+          <div className="menuElement">
             <a href="/">
-              <div className="icon home_icon"></div>
-              <span className="icon_text">프로필</span>
+              <div className="icon homeIcon"></div>
+              <span className="iconText">프로필</span>
             </a>
           </div>
         </div>
-        <div className="hambuger_bar">
-          <div className="icon more_icon"></div>
-          <span className="icon_text">더 보기</span>
+        <div className="hambugerBar">
+          <div className="icon moreIcon"></div>
+          <span className="iconText">더 보기</span>
         </div>
       </nav>
 
-      <div className="main_wrap">
+      <div className="mainWrap">
         <div className="blank"></div>
         <div className="feeds">
           <Feed
@@ -109,28 +107,27 @@ const Main = () => {
           />
         </div>
 
-        <div className="main_right">
+        <div className="mainRight">
           {/* 상단 나의 계정 */}
-          <div className="account_wrap">
+          <div className="accountWrap">
             <div className="left">
-              <div className="profile_img_big "></div>
-              <div className="margin_left column">
-                <span className="user_id text_bold">wecode_zzang</span>
-                <span className="text_s text_gray">codekim</span>
+              <div className="profileImgBig "></div>
+              <div className="marginLeft column">
+                <span className="userId textBold">wecode_zzang</span>
+                <span className="textS textGray">codekim</span>
               </div>
             </div>
-            <span className="right text_blue text_ss text_bold"> 전환</span>
+            <span className="right textBlue textSs textBold"> 전환</span>
           </div>
 
-          <div className="recommend flex_space_between">
-            <span className="text_s text_semibold text_gray ">
+          <div className="recommend flexSpaceBetween">
+            <span className="textS textSemibold textGray ">
               회원님을 위한 추천
             </span>
-            <span className="text_ss text_semibold">모두 보기</span>
+            <span className="textSs textSemibold">모두 보기</span>
           </div>
           {/* 추천계정목록 */}
           <div id="userContentWrap">
-            {/* 아래 유저들 */}
             <User />
             <User />
             <User />
@@ -140,12 +137,12 @@ const Main = () => {
           <div className="info">
             <ul>
               {FOOTER_INFO_LIST.map((i, index) => (
-                <a key={i.id} className="text_ss text_lightgray" href={i.link}>
+                <a key={i.id} className="textSs textLightgray" href={i.link}>
                   {i.text}
                 </a>
               ))}
             </ul>
-            <span className="text_ss text_lightgray">
+            <span className="textSs textLightgray">
               © 2023 Instagram from Meta
             </span>
           </div>

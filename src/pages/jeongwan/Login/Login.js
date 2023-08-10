@@ -7,14 +7,13 @@ const Login = () => {
   // 메인으로 가는 함수
   const navigate = useNavigate();
 
-  const goToMain = () => {
-    navigate("/jeongwan-main");
-  };
-
   //사용자 입력 데이터 저장
-
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
+
+  const goToMain = (e) => {
+    navigate("/jeongwan-main");
+  };
 
   const saveUserId = (event) => {
     setId(event.target.value);

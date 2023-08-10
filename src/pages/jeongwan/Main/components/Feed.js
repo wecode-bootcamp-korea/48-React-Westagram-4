@@ -1,5 +1,5 @@
 import "../Main.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Comment from "../components/Comment";
 
 const Feed = ({
@@ -9,72 +9,71 @@ const Feed = ({
   isCommentInput,
   makeComment,
 }) => {
+  // useEffect(fetch("/data/feedData.json"), []);
   return (
     <>
       <div className="article">
-        <div className="article_top">
+        <div className="articleTop">
           <div className="left">
-            <div className="profile_img "></div>
-            <div className="margin_left">
-              <span className="user_id text_bold">wecode_zzang</span>
+            <div className="profileImg "></div>
+            <div className="marginLeft">
+              <span className="userId textBold">wecode_zzang</span>
               <span className="date"> · 1일</span>
             </div>
           </div>
 
-          <div className="right icon_m more_icon"></div>
+          <div className="right iconM moreIcon"></div>
         </div>
 
-        <div className="main_img">
-          <div className="img_src"></div>
+        <div className="mainImg">
+          <div className="imgSrc"></div>
         </div>
 
-        <div className="article_text_wrap">
-          <div className="article_icon margin_bottom">
+        <div className="articleTextWrap">
+          <div className="articleIcon marginBottom">
             <div className="left">
-              <div className="icon margin_right heart_icon"></div>
-
-              <div className="icon margin_right talk_icon"></div>
-
-              <div className="icon margin_right airplane_icon"></div>
+              <div className="icon marginRight heartIcon"></div>
+              <div className="icon marginRight talkIcon"></div>
+              <div className="icon marginRight airplaneIcon"></div>
             </div>
 
-            <div className="icon_ss bookmark_icon"></div>
+            <div className="iconSs bookmarkIcon"></div>
           </div>
 
-          <div className="text_s text_bold margin_bottom">좋아요 15개</div>
-          <div className="space_between">
-            <div className="text_s">secrecy_shhhh 무더운 이 여름</div>
-            <div className="heart_icon icon_ss"></div>
+          <div className="textS textBold marginBottom">좋아요 15개</div>
+          <div className="spaceBetween">
+            <div className="textS">secrecy_shhhh 무더운 이 여름</div>
+            <div className="heartIcon iconSs"></div>
           </div>
           <div className="allComment">
-            <a className="text_s text_gray" href="/">
+            <a className="textS textGray" href="/">
               댓글 4개 모두 보기
             </a>
           </div>
           <Comment commentValue={commentList} inputValue={inputValue} />
 
-          <div className="comment_area">
-            <form className="comment_area">
+          <div className="commentArea">
+            <form className="commentArea">
               <input
                 id="textarea"
                 value={inputValue}
                 onChange={saveInputValue}
                 rows={1}
-                className="comment_input text_s text_gray"
+                className="commentInput textS textGray"
                 placeholder="댓글 달기..."
               />
               {isCommentInput ? (
                 <button
                   type="button"
                   onClick={makeComment}
-                  className="inputButton text_bold"
+                  className="inputButton textBold"
                 >
                   게시
                 </button>
               ) : null}
             </form>
 
-            <div className="heart_icon icon_ss"></div>
+            <div className="heartIcon iconSs"></div>
           </div>
         </div>
       </div>
