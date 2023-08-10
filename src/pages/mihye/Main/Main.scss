@@ -93,20 +93,32 @@ ul li {
       background-color: white;
       margin: 20px 5px;
       background-color: white;
+      width: 1000px;
 
       .userProfileBox {
         display: flex;
         align-items: center;
         margin: 10px;
         font-size: 20px;
-
+        .userNickname {
+          margin-right: 20px;
+          font-weight: 600;
+        }
         .userProfileImg {
-          width: 50px;
+          width: 32px;
+
+          height: 32px;
+          border-radius: 50%;
+          margin-right: 10px;
         }
       }
 
-      .feedImageImg {
+      .feedImage {
         width: 100%;
+
+        img {
+          width: 100%;
+        }
       }
 
       .feedIconBox {
@@ -133,6 +145,28 @@ ul li {
         background-color: white;
         font-size: 20px;
         margin: 14px 10px;
+
+        .commentData {
+          display: flex;
+          align-items: center;
+        }
+
+        .commentUserProfileImg {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        .commentUserName {
+          margin-right: 20px;
+          font-weight: 600;
+        }
+      }
+
+      .contentBox {
+        margin: 15px 10px 15px 5px;
+        font-size: 20px;
+        width: 100%;
       }
     }
   }

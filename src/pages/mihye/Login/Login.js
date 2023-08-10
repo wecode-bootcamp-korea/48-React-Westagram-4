@@ -5,6 +5,38 @@ import { useNavigate } from "react-router-dom";
 const LoginMihye = () => {
   const navigate = useNavigate();
   const goToMain = () => {
+    //   fetch("http://10.58.52.196:3000/users/login_practice", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json;charset=utf-8",
+    //     },
+    //     body: JSON.stringify({
+    //       email: userDataValue.inputId,
+    //       password: userDataValue.inputPassword,
+    //     }),
+    //   })
+    //     .then((res) => {
+    //       if (res.ok) {
+    //         alert("회원가입 성공!");
+
+    //         return;
+    //       }
+
+    //       return res.json();
+    //     })
+    //     .then((data) => {
+    //       console.log(data);
+    //       if (
+    //         data.message ===
+    //         "Duplicate entry 'algp1205@naver.com' for key 'users.users_email_ukey'"
+    //       ) {
+    //         localStorage.setItem("TOKEN", data.token);
+    //         alert("로그인 성공");
+    //         navigate("/mihye-main");
+    //       } else {
+    //         alert("로그인 실패");
+    //       }
+    //     });
     navigate("/mihye-main");
   };
 
@@ -31,7 +63,7 @@ const LoginMihye = () => {
           <p>Westagram</p>
         </div>
         <div className="login">
-          <form action="sighIn.html" method="get" id="formWrap">
+          <div className="loginBox">
             <div className="idBox">
               <input
                 className="inputId"
@@ -50,14 +82,13 @@ const LoginMihye = () => {
             </div>
 
             <button
-              type="submit"
               className="loginButton"
               onClick={goToMain}
               disabled={isVaild()}
             >
               로그인
             </button>
-          </form>
+          </div>
         </div>
         <div className="buttonText">
           <p>비밀번호를 잊으셨나요?</p>
