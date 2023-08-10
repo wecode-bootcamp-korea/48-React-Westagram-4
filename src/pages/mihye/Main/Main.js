@@ -1,14 +1,25 @@
-import React, { useState, KeyboardEvent } from "react";
+import React, { useState, KeyboardEvent, useEffect } from "react";
 import "./Main.scss";
 import Footer from "./Footer";
-import { FOOTER_INFO_LIST } from "./data";
 
 const CommentComponent = (props) => {
   return <p>{props.comment}</p>;
 };
+
 const MainMihye = () => {
   const [commentValue, setCommentValue] = useState();
   const [addToCommentList, setAddToCommentList] = useState([]);
+  const [feedDataList, setFeedDataList] = useState();
+
+  useEffect(() => {
+    fetch("/data/feedsData.json", {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setFeedDataList(data);
+      });
+  }, []);
 
   const onChange = (e) => {
     setCommentValue([e.target.value]);
@@ -88,7 +99,7 @@ const MainMihye = () => {
             </div>
             <div className="feedImage">
               <img
-                src="\images\mihye\feeds_image.png"
+                src="https://source.unsplash.com/random/300×300"
                 alt="userFeedImage"
               ></img>
             </div>

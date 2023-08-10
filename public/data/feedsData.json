@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "userName": "wecode_primium",
+      "userProfile": "https://source.unsplash.com/random/?women,men",
+      "location": "wecode",
+      "feedImages": ["https://source.unsplash.com/random/300×300"],
+      "isLike": false,
+      "likeCount": 52,
+      "content": "오늘은 2차 프로젝트를 진행 중인 47기 분들의 소식을 가져왔어요💌 <br /> 이번주 금요일에 있을 데모데이를 앞둔 47기 분들! <br /> 프로젝트 기한까지 얼마 남지 않아 막판 스퍼트로 열심히 기능 구현을 해가는 중이에요",
+      "comments": [
+        {
+          "commentId": 1,
+          "userName": "pliossun",
+          "userProfile": "https://source.unsplash.com/random/?women,men",
+          "comment": "집중!!!!!! 이로군요",
+          "createdAt": "2023-07-27T21:26:17Z"
+        },
+        {
+          "commentId": 2,
+          "userName": "wecode_founder",
+          "userProfile": "https://source.unsplash.com/random/?women,men",
+          "comment": "막판 스퍼트 고고",
+          "createdAt": "2023-07-27T19:26:17Z"
+        }
+      ],
+      "createdAt": "2023-07-27T19:26:17Z"
+    },
+
+    {
+      "id": 2,
+      "userName": "wecode_primium",
+      "userProfile": "https://source.unsplash.com/random/?women,men",
+      "location": "wecode",
+      "feedImages": ["https://source.unsplash.com/random/300×300"],
+      "isLike": false,
+      "likeCount": 52,
+      "content": "오늘은 2차 프로젝트를 진행 중인 47기 분들의 소식을 가져왔어요💌 <br /> 이번주 금요일에 있을 데모데이를 앞둔 47기 분들! <br /> 프로젝트 기한까지 얼마 남지 않아 막판 스퍼트로 열심히 기능 구현을 해가는 중이에요",
+      "comments": [
+        {
+          "commentId": 1,
+          "userName": "pliossun",
+          "userProfile": "https://source.unsplash.com/random/?women,men",
+          "comment": "집중!!!!!! 이로군요",
+          "createdAt": "2023-07-27T21:26:17Z"
+        },
+        {
+          "commentId": 2,
+          "userName": "wecode_founder",
+          "userProfile": "https://source.unsplash.com/random/?women,men",
+          "comment": "막판 스퍼트 고고",
+          "createdAt": "2023-07-27T19:26:17Z"
+        }
+      ],
+      "createdAt": "2023-07-27T19:26:17Z"
+    },
+
+    {
+      "id": 3,
+      "userName": "wecode_primium",
+      "userProfile": "https://source.unsplash.com/random/?women,men",
+      "location": "wecode",
+      "feedImages": ["https://source.unsplash.com/random/300×300"],
+      "isLike": false,
+      "likeCount": 52,
+      "content": "오늘은 2차 프로젝트를 진행 중인 47기 분들의 소식을 가져왔어요💌 <br /> 이번주 금요일에 있을 데모데이를 앞둔 47기 분들! <br /> 프로젝트 기한까지 얼마 남지 않아 막판 스퍼트로 열심히 기능 구현을 해가는 중이에요",
+      "comments": [
+        {
+          "commentId": 1,
+          "userName": "pliossun",
+          "userProfile": "https://source.unsplash.com/random/?women,men",
+          "comment": "집중!!!!!! 이로군요",
+          "createdAt": "2023-07-27T21:26:17Z"
+        },
+        {
+          "commentId": 2,
+          "userName": "wecode_founder",
+          "userProfile": "https://source.unsplash.com/random/?women,men",
+          "comment": "막판 스퍼트 고고",
+          "createdAt": "2023-07-27T19:26:17Z"
+        }
+      ],
+      "createdAt": "2023-07-27T19:26:17Z"
+    }
+  ]
+}
