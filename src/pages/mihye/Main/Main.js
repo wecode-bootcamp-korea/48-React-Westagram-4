@@ -99,15 +99,19 @@ const Feed = (props) => {
             })}
           </div>
         </div>
-        <input
-          type="text"
-          className="commentInput"
-          placeholder="댓글 달기..."
-          onChange={onChange}
-          value={commentValue}
-          onKeyPress={handleKeyPress}
-        ></input>
-        <button onClick={onClick}>확인</button>
+        <label className="commentLabelTag">
+          <input
+            type="text"
+            className="commentInput"
+            placeholder="댓글 달기..."
+            onChange={onChange}
+            value={commentValue}
+            onKeyPress={handleKeyPress}
+          ></input>
+          <button className="commentAddButton" onClick={onClick}>
+            확인
+          </button>
+        </label>
       </article>
     </div>
   );
@@ -150,7 +154,7 @@ const Feeds = () => {
   );
 };
 
-const MainMihye = () => {
+const MainMihye = (props) => {
   return (
     <div className="cotainer">
       <nav id="navbar">
@@ -211,15 +215,53 @@ const MainMihye = () => {
             <p className="myAccountProfileNickname">myeee_jeon</p>
           </div>
           <div className="storyList">
-            <p>스토리~~~~~~~~~~~~</p>
-            <p>스토리~~~~~~~~~~~~</p>
-            <p>스토리~~~~~~~~~~~~</p>
+            <div className="myAccountProfileWrap">
+              <img
+                className="myAccountProfileImage"
+                src="\images\mihye\user_profile_image.png"
+                alt="myAccount"
+              ></img>
+
+              <p className="myAccountProfileNickname">myeee_jeon</p>
+            </div>
+            <div className="myAccountProfileWrap">
+              <img
+                className="myAccountProfileImage"
+                src="\images\mihye\user_profile_image.png"
+                alt="myAccount"
+              ></img>
+
+              <p className="myAccountProfileNickname">myeee_jeon</p>
+            </div>
+            <div className="myAccountProfileWrap">
+              <img
+                className="myAccountProfileImage"
+                src="\images\mihye\user_profile_image.png"
+                alt="myAccount"
+              ></img>
+
+              <p className="myAccountProfileNickname">myeee_jeon</p>
+            </div>
           </div>
           <div className="commendList">
-            <p>추천친구~~~~~~~~~~~</p>
-            <p>추천친구~~~~~~~~~~~</p>
-            <p>추천친구~~~~~~~~~~~</p>
-            <p>추천친구~~~~~~~~~~~</p>
+            <div className="myAccountProfileWrap">
+              <img
+                className="myAccountProfileImage"
+                src="\images\mihye\user_profile_image.png"
+                alt="myAccount"
+              ></img>
+
+              <p className="myAccountProfileNickname">myeee_jeon</p>
+            </div>
+            <div className="myAccountProfileWrap">
+              <img
+                className="myAccountProfileImage"
+                src="\images\mihye\user_profile_image.png"
+                alt="myAccount"
+              ></img>
+
+              <p className="myAccountProfileNickname">myeee_jeon</p>
+            </div>
           </div>
           <div className="footerBox">
             <Footer></Footer>

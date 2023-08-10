@@ -6,6 +6,11 @@
 ul li {
   list-style: none;
 }
+
+a {
+  color: black;
+  text-decoration: none;
+}
 .cotainer {
   margin: 30px 60px;
   height: 100vh;
@@ -98,8 +103,9 @@ ul li {
       .userProfileBox {
         display: flex;
         align-items: center;
-        margin: 10px;
+        margin: 8px 10px 17px 10px;
         font-size: 20px;
+
         .userNickname {
           margin-right: 20px;
           font-weight: 600;
@@ -145,29 +151,30 @@ ul li {
         background-color: white;
         font-size: 20px;
         margin: 14px 10px;
-
-        .commentData {
-          display: flex;
-          align-items: center;
-        }
-
-        .commentUserProfileImg {
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          margin-right: 10px;
-        }
-        .commentUserName {
-          margin-right: 20px;
-          font-weight: 600;
-        }
       }
 
-      .contentBox {
-        margin: 15px 10px 15px 5px;
-        font-size: 20px;
-        width: 100%;
+      .commentData {
+        display: flex;
+        align-items: center;
+        margin: 8px 0;
       }
+
+      .commentUserProfileImg {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .commentUserName {
+        margin-right: 20px;
+        font-weight: 600;
+      }
+    }
+
+    .contentBox {
+      margin: 15px 10px 15px 5px;
+      font-size: 20px;
+      width: 100%;
     }
   }
   .mainRightBox {
@@ -190,7 +197,9 @@ ul li {
         width: 50px;
       }
     }
-
+    .myAccountProfileWrap {
+      margin: 8px;
+    }
     .storyList {
       border: solid 3px #ededed;
       margin: 30px 0;
@@ -207,6 +216,18 @@ ul li {
 
   width: 100%;
   height: 50px;
+}
+
+.commentLabelTag {
+  position: relative;
+
+  .commentAddButton {
+    position: absolute;
+    width: 50px;
+    height: 35px;
+    top: -5px;
+    right: 6px;
+  }
 }
 @media (max-width: 768px) {
   .cotainer {
