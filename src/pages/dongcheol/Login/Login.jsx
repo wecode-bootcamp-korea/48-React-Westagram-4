@@ -17,7 +17,6 @@ export default function LoginDongcheol() {
   };
 
   const isValid = userInfo.userId.includes("@") && userInfo.userPw.length > 4;
-  // const color = isValid ? "#3897f0" : "lightgrey";
 
   return (
     <>

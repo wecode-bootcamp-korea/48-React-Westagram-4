@@ -21,7 +21,7 @@ nav div {
   justify-content: center;
 }
 
-.logo-line {
+.logoLine {
   height: 75%;
   border: 1px solid black;
   border-radius: 3px;
@@ -40,7 +40,7 @@ nav img {
   height: 80%;
   cursor: pointer;
 }
-.nav-center {
+.navCenter {
   position: relative;
   width: 35%;
   input {
@@ -56,7 +56,7 @@ nav img {
     }
   }
 }
-.search-icon {
+.searchIcon {
   position: absolute;
   top: 5px;
   left: 28%;
@@ -64,7 +64,7 @@ nav img {
   cursor: text;
 }
 
-.nav-right {
+.navRight {
   display: flex;
   height: 100%;
   width: 20%;
@@ -77,24 +77,8 @@ nav img {
   }
 }
 @media (min-width: 951px) {
-  .nav-right {
+  .navRight {
     width: 15%;
-  }
-}
-
-.mr-category {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-right: 10px;
-  p {
-    color: grey;
-    cursor: default;
-  }
-  h4 {
-    font-weight: bold;
-    font-size: 0.9rem;
-    cursor: pointer;
   }
 }
 
@@ -117,22 +101,22 @@ article {
   margin: 10px auto 40px auto;
 }
 
-.feed-user {
+.feedUser {
   display: flex;
   align-content: center;
   margin: 7px auto 7px 0;
   padding-left: 3%;
 }
-.fu-img img {
+.feedUserImg img {
   border-radius: 50%;
 }
-.feed-images {
+.ffeedImages {
   margin-left: 0;
 }
-.feed-img {
+.feedImg {
   width: 100%;
 }
-.fu-info {
+.feedUserInfo {
   h4 {
     margin: 3px 10px;
     font-weight: 600;
@@ -145,10 +129,10 @@ article {
     font-size: 0.8rem;
   }
 }
-.feed-bottom h4 {
+.feedBottom h4 {
   padding-left: 3%;
 }
-.feed-bottom input {
+.feedBottom input {
   width: 94%;
   height: 1.5rem;
   margin: 5px 3%;
@@ -159,7 +143,7 @@ article {
   border: 1px solid gray;
   border-radius: 3px;
 }
-.fb-btns {
+.feedBottomBtns {
   display: flex;
   justify-content: space-between;
   margin: 10px 10px 0 10px;
@@ -169,24 +153,24 @@ article {
     color: grey;
   }
 }
-.fb-whoLike {
+.feedBottomWhoIsLike {
   font-size: 0.8rem;
   margin-top: 5px;
   margin-bottom: 0;
 }
-.fb-content {
+.feedBottomContent {
   margin: 5px 0;
   display: flex;
   align-items: center;
 }
-.fb-content span {
+.feedBottomContent span {
   margin-right: 7px;
   font-weight: 600;
 }
-.fb-content p {
+.feedBottomContent p {
   font-size: 0.9rem;
 }
-.fb-input {
+.feedBottomInput {
   input {
     width: 70%;
   }
@@ -207,7 +191,7 @@ article {
   display: flex;
   justify-content: space-between;
 }
-.fbComments {
+.feedBottomComments {
   span {
     cursor: pointer;
     font-weight: 600;
@@ -217,12 +201,31 @@ article {
 }
 
 /* Main Right */
-.main-right {
-  border: 1px solid lightgray;
-  width: 30%;
-  height: 10%;
+.mainRight {
+  width: 33%;
   margin: 40px 0 auto auto;
 }
+
+.mainRightSection {
+  border: 1px solid lightgray;
+}
+
+.mainRightCategory {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-right: 10px;
+  p {
+    color: grey;
+    cursor: default;
+  }
+  h4 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+}
+
 .userCard {
   display: flex;
   align-content: center;
@@ -230,11 +233,13 @@ article {
   padding-left: 3%;
   cursor: pointer;
 }
-.userCard:nth-child(1) {
-  margin-top: 7px;
-}
-.userCard:last-child {
-  margin-bottom: 7px;
+.userCard {
+  &:nth-child(1) {
+    margin-top: 7px;
+  }
+  &:last-child {
+    margin-bottom: 7px;
+  }
 }
 .userImg img {
   border-radius: 50%;
@@ -250,4 +255,27 @@ p {
   margin-top: 3px;
   font-size: 0.8rem;
   color: gray;
+}
+
+/* aisdeInfos */
+.asideInfos {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  p {
+    font-size: 0.8rem;
+    margin: 1px;
+    color: lightgrey;
+    &:not(:last-child)::after {
+      content: "\00B7";
+      margin-left: 5px;
+    }
+  }
+}
+
+.companyInfo {
+  font-size: 0.8rem;
+  color: lightgrey;
+  margin: 10px 1px;
 }

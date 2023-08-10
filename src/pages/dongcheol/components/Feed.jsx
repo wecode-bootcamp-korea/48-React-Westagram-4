@@ -11,8 +11,6 @@ export default function Feed({ feed }) {
   const [comments, setComments] = useState(feed.comments);
   const [commentValue, setCommentValue] = useState("");
 
-  console.log(comments);
-
   const handleComment = (e) => {
     setCommentValue(e.target.value);
   };
@@ -37,43 +35,43 @@ export default function Feed({ feed }) {
 
   return (
     <article className="article">
-      <div className="feed-user">
-        <div className="fu-img">
+      <div className="feedUser">
+        <div className="feedUserImg">
           <img src={feed.userImg} alt="#" style={{ width: "40px" }} />
         </div>
-        <div className="fu-info">
+        <div className="feedUserInfo">
           <h4>{feed.userId}</h4>
           <p>{feed.userName}</p>
         </div>
       </div>
-      <div className="feed-images">
-        <img className="feed-img" src={feed.img} alt="#" />
+      <div className="feedImages">
+        <img className="feedImg" src={feed.img} alt="#" />
       </div>
-      <div className="feed-bottom">
-        <div className="fb-info">
-          <div className="fbi-left"></div>
-          <div className="fbi-right"></div>
+      <div className="feedBottom">
+        <div className="feedBottomInfo">
+          <div className="feedBottomInfoLeft"></div>
+          <div className="feedBottomInfoRight"></div>
         </div>
-        <div className="fb-btns">
-          <div className="btns-left">
+        <div className="feedBottomBtns">
+          <div className="feedBottomBtnsLeft">
             <PiHeartLight />
             <PiChatCircleLight />
             <PiPaperPlaneTiltLight />
           </div>
-          <div className="btns-right">
+          <div className="feedBottomBtnsRight">
             <PiBookmarkSimpleLight />
           </div>
         </div>
-        <div className="fb-whoLike">
+        <div className="feedBottomWhoIsLike">
           <p>{whoIsLike(feed.likes)}</p>
         </div>
-        <div className="fb-content">
+        <div className="feedBottomContent">
           <p>
             <span>{feed.userId}</span>
             {feed.content}
           </p>
         </div>
-        <div className="fb-input">
+        <div className="feedBottomInput">
           <form className="commentSubmit" action="" method="">
             <input
               type="text"

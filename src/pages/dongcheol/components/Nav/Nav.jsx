@@ -11,7 +11,7 @@ export default function Nav() {
 
   return (
     <nav>
-      <div className="nav-left">
+      <div className="navLeft">
         <img
           onClick={() => {
             goTo("/dongcheol-login");
@@ -19,7 +19,7 @@ export default function Nav() {
           src="/images/dongcheol/insta_mini_logo.png"
           alt="instagram"
         />
-        <div className="logo-line"></div>
+        <div className="logoLine"></div>
         <img
           onClick={() => {
             goTo("/dongcheol-main");
@@ -28,11 +28,11 @@ export default function Nav() {
           alt="instagram"
         />
       </div>
-      <div className="nav-center">
-        <FiSearch className="search-icon" />
+      <div className="navCenter">
+        <FiSearch className="searchIcon" />
         <input type="text" placeholder="검색" />
       </div>
-      <div className="nav-right">
+      <div className="navRight">
         <PiHeartLight />
         <PiCompassLight />
         <PiUserLight />

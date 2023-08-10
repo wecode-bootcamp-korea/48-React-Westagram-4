@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Comment({ userId, content }) {
   return (
-    <div className="fbComments">
+    <div className="feedBottomComments">
       <p>
         <span>{userId}</span>
         {content}
