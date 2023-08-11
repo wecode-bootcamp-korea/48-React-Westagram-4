@@ -1,5 +1,6 @@
 a {
     color: #000;
+    text-decoration: none;
   }
   
   
@@ -85,21 +86,108 @@ a {
   /************************/
   /************MAIN************/
   main {
-    width: 100%;
-    // display: flex;
-    // justify-content: space-around;
-    // align-items: center;
-    // outline: 2px solid lime;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ddd;
+    //outline: 2px solid lime;
   }
   .feed {
     width: 100%;
-      display: flex;
-      justify-content: space-between;
-    outline: 2px solid red;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   
     .feedTop {
-      
-      outline: 2px solid yellow;
+      width: 100%;
+
+      .user {
+        float: left;
+        img {
+          height: 40px;
+          border-radius: 100%;
+          float: left;
+          margin: 5px 20px;
+        }
+        p {
+          float: right;
+          line-height: 50px;
+        }
+      }
+
+      .moreBtn {
+        width: 20px;
+        height: 30px;
+        margin: 10px 10px 0 0;
+        box-sizing: border-box;
+        float: right;
+        position: relative;
+        cursor: pointer;
+        .btn {
+        position: absolute;
+        top: 50%;
+        width: 4px;
+        height: 4px;
+        background-color: gray;
+        border-radius: 4px;
+        }
+        .btn:nth-child(2) {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .btn:last-child {
+          left: 100%;
+          transform: translateX(-100%);
+        }
+      }
     }
+
+    .feedImg {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .feedIcon {
+      width: 100%;
+      //outline: 2px solid red;
+      .left {
+        float: left;
+        img {
+            height: 40px;
+        }
+      }
+      .right {
+        float: right;
+        img {
+          height: 50px;
+          margin-top: -5px;
+        }
+      }
+    }
+
+  .feedContent {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    input {
+      width: 87%;
+      padding: 15px 8px;
+      border: 0;
+      outline: none;
+      float: left;
+      //outline: 2px solid red;
+    }
+    button {
+      float: right;
+      width: 10%;
+      padding: 13px 0;
+      background-color: inherit;
+      border: 0;
+      color: lightblue;
+      cursor: pointer;
+    }
+  }  
+
   }
   

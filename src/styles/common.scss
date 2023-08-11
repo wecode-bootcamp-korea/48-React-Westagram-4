@@ -1,0 +1,11 @@
+.bold {
+    font-weight: bold;
+}
+.gray {
+    color: gray;
+}
+.clearFix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
